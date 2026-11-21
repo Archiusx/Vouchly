@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vouchly Beta – Buy &amp; Sell Gift Cards, Coupons and Subscription Vouchers in India</title>
+<meta name="description" content="Vouchly is a beta marketplace to buy and sell gift cards, coupon codes and subscription vouchers at your own price. Codes stay locked until the buyer pays.">
+<meta name="keywords" content="split subscription cost, group plan, team plan seats, sell gift card, buy gift card, coupon code marketplace, sell subscription voucher, Vouchly">
+<meta name="author" content="Vouchly">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#fef7e0">
+<link rel="canonical" href="https://example.com/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Vouchly">
+<meta property="og:title" content="Vouchly Beta – Gift voucher marketplace">
+<meta property="og:description" content="Sell your unused vouchers at your own price. Buyers get the code only after payment.">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Vouchly Beta – Gift voucher marketplace">
+<meta name="twitter:description" content="List a coupon code, set your price, get paid when it sells.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cmask id='m'%3E%3Crect width='100' height='100' fill='white'/%3E%3Ccircle cx='8' cy='50' r='9'/%3E%3Ccircle cx='92' cy='50' r='9'/%3E%3C/mask%3E%3C/defs%3E%3Crect x='8' y='20' width='84' height='60' rx='14' fill='%231a73e8' mask='url(%23m)'/%3E%3Cpath d='M33 40l17 22 17-22' stroke='white' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='84' cy='22' r='11' fill='%23fbbc04'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Vouchly","description":"Beta marketplace to buy and sell gift vouchers and coupon codes.","inLanguage":"en-IN","potentialAction":{"@type":"SearchAction","target":"https://example.com/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script>try{var t=localStorage.getItem("vouchly_theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<style>
+:root{--bg:#fff;--s1:#f1f3f9;--s2:#e8eaf0;--text:#1f1f1f;--muted:#5f6368;--line:#c4c7c5;--blue:#0b57d0;--blue-d:#0842a0;--blue-bg:#e9eef6;--green:#146c2e;--green-bg:#c4eed0;--warm:#fef7e0;--warm2:#fde9b0;--red:#b3261e;--ease:cubic-bezier(.2,0,0,1);--ease-in:cubic-bezier(.3,0,.8,.15);--sh:0 1px 3px 1px rgba(0,0,0,.15),0 1px 2px rgba(0,0,0,.3);--sh2:0 4px 8px 3px rgba(0,0,0,.15),0 1px 3px rgba(0,0,0,.3)}
+@media(prefers-color-scheme:dark){:root{--bg:#131314;--s1:#1e1f20;--s2:#2d2f31;--text:#e3e3e3;--muted:#c4c7c5;--line:#444746;--blue:#a8c7fa;--blue-d:#d3e3fd;--blue-bg:#1d2c44;--green:#6dd58c;--green-bg:#0f3d1f;--warm:#2b2415;--warm2:#3d3217;--red:#f2b8b5}}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{font-family:"Google Sans","Product Sans",Roboto,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+.btn,.chip,.card,.x{position:relative;overflow:hidden}
+.rp{position:absolute;border-radius:50%;background:currentColor;opacity:.16;transform:scale(0);animation:rp .55s var(--ease) forwards;pointer-events:none}
+@keyframes rp{to{transform:scale(1);opacity:0}}
+header{position:sticky;top:0;z-index:20;background:var(--warm);transition:box-shadow .3s var(--ease),background .3s;padding-top:env(safe-area-inset-top)}
+header.stuck{box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.nav{display:flex;align-items:center;gap:12px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:500;font-size:22px;color:var(--text)!important;text-decoration:none!important}
+.logo svg{width:32px;height:32px}
+.beta{font-size:11px;font-weight:700;background:#fbbc04;color:#3c2e00;border-radius:6px;padding:1px 7px;letter-spacing:.03em}
+.nav nav{margin-left:auto;display:flex;gap:4px;align-items:center}
+.lnk{color:var(--text);padding:8px 14px;border-radius:20px;font-weight:500;font-size:14px}.lnk:hover{background:rgba(0,0,0,.07);text-decoration:none}
+.btn{font-weight:500;font-size:14px;border:1px solid transparent;border-radius:100px;padding:0 24px;height:40px;cursor:pointer;background:var(--blue);color:#fff;transition:background .2s var(--ease),box-shadow .2s var(--ease),transform .15s var(--ease);display:inline-flex;align-items:center;justify-content:center;gap:8px}
+@media(prefers-color-scheme:dark){.btn{color:#062e6f}.btn.g{color:#0a3818}}
+.btn:hover{background:var(--blue-d);box-shadow:var(--sh)}.btn:active{transform:scale(.97)}
+.btn.o{background:transparent;color:var(--blue);border-color:var(--line)}.btn.o:hover{background:var(--blue-bg);box-shadow:none}
+.btn.g{background:var(--green);color:#fff}.btn.full{width:100%;height:56px;font-size:16px}.btn:disabled{opacity:.7;cursor:default}
+.hero{background:linear-gradient(var(--warm),var(--warm2) 140%);padding:28px 0 44px;border-radius:0 0 32px 32px;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px}
+.hero .amt{font-size:clamp(56px,13vw,96px);font-weight:400;line-height:1;letter-spacing:-.03em}
+.hero .lbl{font-size:clamp(18px,3vw,24px);margin-top:6px}
+.hero svg{width:clamp(120px,26vw,240px);height:auto}
+.hero p{color:var(--muted);margin-top:6px;max-width:44ch}
+.search{display:flex;align-items:center;gap:10px;margin-top:22px;background:var(--bg);border-radius:28px;padding:0 8px 0 18px;height:56px;box-shadow:var(--sh);transition:box-shadow .25s var(--ease)}
+.search:focus-within{box-shadow:var(--sh2)}
+.search input{flex:1;border:0;outline:0;font:inherit;font-size:16px;background:transparent;color:var(--text);min-width:0}
+.search svg{width:22px;height:22px;fill:var(--muted);flex:none}
+.sec{padding-top:36px;padding-bottom:8px}
+.sec h2{font-size:clamp(24px,4vw,32px);font-weight:400;margin-bottom:4px}
+.sub{color:var(--muted);margin-bottom:18px}
+.bar{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+select{font:inherit;font-size:14px;height:40px;padding:0 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 18px;scrollbar-width:none;margin:0 -2px}.chips::-webkit-scrollbar{display:none}
+.chip{font-size:14px;white-space:nowrap;border:1px solid var(--line);background:transparent;color:var(--text);border-radius:8px;height:34px;padding:0 16px;cursor:pointer;transition:background .25s var(--ease),color .25s,border-color .25s}
+.chip[aria-pressed=true]{background:var(--blue-bg);color:var(--blue);border-color:transparent;font-weight:500}
+.hs{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 18px;scrollbar-width:none}.hs::-webkit-scrollbar{display:none}.hs .card{flex:0 0 min(78%,250px);scroll-snap-align:start}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:16px}
+.card{border:1.5px solid var(--line);border-radius:24px;background:var(--bg);cursor:pointer;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease);text-align:left;color:inherit}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}.card:active{transform:scale(.98)}
+.card.in{animation:up .5s var(--ease) both;animation-delay:calc(var(--i)*45ms)}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+.ph{position:relative;aspect-ratio:16/10;overflow:hidden;display:grid;place-items:center;color:rgba(255,255,255,.9);font-size:56px;font-weight:700}
+.ph img,.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s var(--ease)}
+.ph img.ld,.sl img.ld{opacity:1}
+.card .ph img{transition:opacity .5s var(--ease),transform .6s var(--ease)}.card:hover .ph img{transform:scale(1.05)}
+.tag{position:absolute;top:10px;right:10px;background:var(--green-bg);color:var(--green);font-size:12px;font-weight:500;border-radius:12px;padding:2px 12px;z-index:1}
+.mini{position:absolute;top:10px;left:10px;width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid #fff;display:grid;place-items:center;font-size:15px;font-weight:700;z-index:1;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.cb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:2px;flex:1}
+.cb h3{font-size:22px;font-weight:400;line-height:1.2}.cb p{font-size:14px;color:var(--muted)}
+.cb .pr{margin-top:auto;padding-top:12px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.pr b{font-size:18px;font-weight:500}.pr s{color:var(--muted);font-size:13px}
+.off{background:var(--green-bg);color:var(--green);font-size:12px;font-weight:500;border-radius:8px;padding:1px 8px}
+.sk{height:300px;border-radius:24px;background:linear-gradient(90deg,var(--s1) 25%,var(--s2) 50%,var(--s1) 75%);background-size:200% 100%;animation:sh 1.2s linear infinite}
+@keyframes sh{to{background-position:-200% 0}}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:48px 12px;border:1.5px dashed var(--line);border-radius:24px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
+.step{background:var(--s1);border-radius:24px;padding:24px}
+.step i{font-style:normal;width:44px;height:44px;border-radius:50%;background:var(--blue-bg);color:var(--blue);display:grid;place-items:center;font-weight:500;margin-bottom:12px}
+.step h3{font-size:18px;font-weight:500;margin-bottom:4px}.step p{color:var(--muted);font-size:14px}
+details.f{border-bottom:1px solid var(--line);padding:16px 0}
+details.f summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.f summary::after{content:"+";color:var(--muted);transition:transform .3s var(--ease)}details.f[open] summary::after{transform:rotate(45deg)}
+details.f p{color:var(--muted);margin-top:8px;animation:fd .3s var(--ease)}
+@keyframes fd{from{opacity:0;transform:translateY(-6px)}}
+footer{background:var(--s1);margin-top:48px;padding:32px 0 calc(32px + env(safe-area-inset-bottom));font-size:13px;color:var(--muted)}
+footer .links{display:flex;gap:6px 18px;flex-wrap:wrap;margin-bottom:14px}
+footer .links button{font-size:13px;background:none;border:0;color:var(--blue);cursor:pointer;padding:4px 0}
+footer p{max-width:900px;margin-bottom:8px}
+dialog{border:0;padding:0;background:var(--bg);color:var(--text);width:min(520px,100vw);max-width:100vw;max-height:min(92dvh,900px);border-radius:28px;box-shadow:var(--sh2);overflow:hidden;font-family:inherit}
+dialog[open]{display:flex;flex-direction:column;animation:sin .42s var(--ease)}
+dialog.wide{width:min(700px,100vw)}
+dialog.closing{animation:sout .22s var(--ease-in) forwards}
+dialog::backdrop{background:rgba(0,0,0,.5)}dialog[open]::backdrop{animation:fi .3s}dialog.closing::backdrop{opacity:0;transition:opacity .22s}
+@keyframes sin{from{opacity:0;transform:translateY(48px) scale(.97)}}
+@keyframes sout{to{opacity:0;transform:translateY(32px) scale(.98)}}@keyframes fi{from{opacity:0}}
+.dh{display:flex;align-items:center;gap:12px;padding:14px 16px 10px;flex:none}
+.dh h3{font-size:22px;font-weight:400;flex:1}
+.x{border:0;background:none;width:40px;height:40px;border-radius:50%;cursor:pointer;color:var(--text);display:grid;place-items:center;flex:none}.x:hover{background:var(--s2)}.x svg{width:24px;height:24px;fill:currentColor}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px;flex:none}
+.ht b{display:block;font-weight:400;font-size:20px;line-height:1.2}.ht small{color:var(--muted);font-size:14px}
+.scroll{overflow-y:auto;flex:1;padding:6px 20px 20px;overscroll-behavior:contain}
+.swap{animation:sw .35s var(--ease)}@keyframes sw{from{opacity:0;transform:translateX(24px)}}
+.car{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:0 20px;scrollbar-width:none}.car::-webkit-scrollbar{display:none}
+.sl{flex:0 0 88%;scroll-snap-align:center;aspect-ratio:16/10;border-radius:28px;position:relative;overflow:hidden;display:grid;place-items:center;color:rgba(255,255,255,.85);font-size:72px;font-weight:700}
+.cw{position:relative}.cnt{position:absolute;left:12px;top:12px;background:rgba(32,33,36,.8);color:#fff;font-size:14px;padding:2px 12px;border-radius:14px;z-index:2}
+.big{font-size:clamp(30px,8vw,40px);font-weight:400;line-height:1.15;margin:22px 0 6px}
+.sb{font-size:20px;color:var(--text);margin-bottom:6px}
+.pr2{display:flex;gap:10px;align-items:baseline;margin:6px 0 16px}.pr2 b{font-size:22px;font-weight:500}.pr2 s{color:var(--muted)}
+.pill{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--blue-bg);border-radius:32px;padding:0 24px;height:64px;font-size:22px;overflow:hidden}
+.pill span{font-family:"Google Sans",Roboto,sans-serif;letter-spacing:.02em;filter:blur(7px);transition:filter .8s var(--ease);user-select:none;white-space:nowrap}
+.pill.on span{filter:none;user-select:all}
+.pill button{border:0;background:none;color:var(--blue);cursor:pointer;width:40px;height:40px;border-radius:50%;display:grid;place-items:center}.pill svg{width:24px;height:24px;fill:currentColor}
+.pill button[disabled]{opacity:.5;cursor:default}
+.dt{margin-top:18px}.dt summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:22px;padding:8px 0}
+.dt summary::after{content:"";width:10px;height:10px;border:solid var(--text);border-width:0 2px 2px 0;transform:rotate(225deg);transition:transform .3s var(--ease);margin-right:8px}.dt[open] summary::after{transform:rotate(45deg)}
+.dt ul{padding-left:30px;font-size:18px;line-height:1.55}.dt li{margin-bottom:10px;animation:fd .4s var(--ease) both}
+.cta{padding:12px 20px calc(16px + env(safe-area-inset-bottom));flex:none;background:var(--bg);box-shadow:0 -6px 12px -8px rgba(0,0,0,.25);display:flex;gap:10px}
+.cta:empty{display:none}
+label{display:block;font-size:13px;font-weight:500;margin:16px 0 6px}
+input,textarea,.sel{font:inherit;width:100%;border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg);color:var(--text);transition:border-color .2s,box-shadow .2s}
+textarea{resize:vertical;min-height:84px}
+input:focus,textarea:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue);outline:0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hint{font-size:12px;color:var(--muted);margin-top:4px}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13px;color:var(--muted);margin-top:16px}.chk input{width:18px;height:18px;margin-top:1px;flex:none;accent-color:var(--blue)}
+.sum{background:var(--s1);border-radius:16px;padding:14px 16px;margin:14px 0}.sum div{display:flex;justify-content:space-between;padding:3px 0}.sum .t{border-top:1px solid var(--line);margin-top:6px;padding-top:8px;font-weight:500}
+.err{color:var(--red);font-size:13px;margin-top:8px;min-height:18px}
+.thumbs{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.thumbs button{width:60px;height:60px;border-radius:12px;border:0;padding:0;background-size:cover;background-position:center;cursor:pointer;position:relative;animation:sin .3s var(--ease)}
+.thumbs button::after{content:"×";position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.45);color:#fff;font-size:22px;opacity:0;transition:opacity .2s}.thumbs button:hover::after{opacity:1}
+.ok{text-align:center;padding:12px 0 20px}.ok svg{width:80px;height:80px}.ok circle{fill:none;stroke:var(--green);stroke-width:4;stroke-dasharray:160;stroke-dashoffset:160;animation:dr .6s var(--ease) forwards}.ok path{fill:none;stroke:var(--green);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:50;stroke-dashoffset:50;animation:dr .4s .5s var(--ease) forwards}
+@keyframes dr{to{stroke-dashoffset:0}}
+.ok h4{font-size:24px;font-weight:400;margin-top:6px}
+.spin{width:18px;height:18px;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:rot .7s linear infinite}@keyframes rot{to{transform:rotate(360deg)}}
+.lg h4{margin:18px 0 4px;font-size:16px;font-weight:500}.lg p,.lg li{color:var(--muted);font-size:14px;margin-bottom:6px}.lg ul{padding-left:20px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translate(-50%,0);background:#2e3133;color:#fff;padding:14px 24px;border-radius:12px;font-size:14px;z-index:99;box-shadow:var(--sh2);max-width:92vw;animation:tin .35s var(--ease)}
+.toast[hidden]{display:none}@keyframes tin{from{opacity:0;transform:translate(-50%,24px)}}
+@media(max-width:640px){
+.lnk{display:none}.row{grid-template-columns:1fr}
+dialog,dialog.wide{width:100vw;height:100dvh;max-height:none;border-radius:0;margin:0}
+@keyframes sin{from{opacity:.4;transform:translateY(100%)}}@keyframes sout{to{transform:translateY(100%)}}
+.hero{border-radius:0 0 24px 24px}.sl{flex-basis:90%}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;margin-top:-22px;position:relative;z-index:2}
+.trust div{background:var(--bg);border-radius:20px;box-shadow:var(--sh);padding:14px 16px;display:flex;gap:12px;align-items:center;font-size:13px;color:var(--muted)}
+.trust i{font-style:normal;width:36px;height:36px;border-radius:50%;background:var(--green-bg);color:var(--green);display:grid;place-items:center;font-weight:700;flex:none}
+.trust b{display:block;font-weight:500;font-size:14px;color:var(--text)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
+.tile{font:inherit;text-align:left;border:1.5px solid var(--line);background:var(--bg);color:inherit;border-radius:24px;padding:20px;cursor:pointer;display:flex;gap:16px;align-items:flex-start;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s}
+.tile:hover{transform:translateY(-3px);box-shadow:var(--sh2);background:var(--s1)}
+.tile em{font-style:normal;font-size:28px;width:52px;height:52px;border-radius:16px;background:var(--blue-bg);display:grid;place-items:center;flex:none}
+.tile b{display:block;font-size:18px;font-weight:500}.tile span{color:var(--muted);font-size:14px}
+.note{background:var(--warm);border-radius:12px;padding:10px 14px;font-size:13px;margin-top:10px;animation:fd .3s var(--ease)}.note[hidden]{display:none}
+.fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:24px;margin-bottom:24px}
+.fcols h4{font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px}
+.fcols button{display:block;font-size:13px;background:none;border:0;color:var(--muted);cursor:pointer;padding:4px 0;font-family:inherit;text-align:left}.fcols button:hover{color:var(--blue)}
+.ck{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom));max-width:420px;background:var(--s1);color:var(--text);border-radius:20px;box-shadow:var(--sh2);padding:16px 18px;font-size:13px;z-index:98;animation:ckin .4s var(--ease)}
+.ck[hidden]{display:none}.ck div{display:flex;gap:8px;margin-top:10px}.ck .btn{height:36px;padding:0 18px}
+@keyframes ckin{from{opacity:0;transform:translateY(24px)}}
+@media(max-width:640px){.ck{left:12px;right:12px;max-width:none}}
+.ic{width:28px;height:28px;fill:currentColor;display:block}.trust .ic{width:20px;height:20px}.tile em{color:var(--blue)}
+#splash{position:fixed;inset:0;z-index:1000;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;animation:spOut .5s var(--ease) 1.9s forwards}
+#splash .sp-l{width:112px;height:112px;animation:spLogo .9s var(--ease) both}
+#splash b{font-size:30px;font-weight:500;letter-spacing:-.01em;animation:spTxt .6s var(--ease) .45s both}
+#splash .beta{animation:spTxt .6s var(--ease) .6s both;margin-top:-6px}
+#splash .dots{display:flex;gap:8px;margin-top:28px;animation:spTxt .5s var(--ease) .8s both}
+#splash .dots i{width:10px;height:10px;border-radius:50%;animation:bn 1s var(--ease) infinite}
+#splash .dots i:nth-child(1){background:#4285f4}#splash .dots i:nth-child(2){background:#ea4335;animation-delay:.12s}#splash .dots i:nth-child(3){background:#fbbc04;animation-delay:.24s}#splash .dots i:nth-child(4){background:#34a853;animation-delay:.36s}
+@keyframes spLogo{from{opacity:0;transform:scale(.45) rotate(-14deg)}60%{transform:scale(1.08) rotate(2deg)}}
+@keyframes spTxt{from{opacity:0;transform:translateY(14px)}}
+@keyframes bn{0%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}}
+@keyframes spOut{to{opacity:0;visibility:hidden;transform:scale(1.05)}}
+@media(prefers-reduced-motion:reduce){#splash{animation-delay:.7s!important}}
+.wrap{max-width:1240px}
+.sec{padding-top:clamp(40px,7vw,80px);padding-bottom:8px}
+.sec h2{font-size:clamp(26px,4.4vw,36px);margin-bottom:6px}
+.sub{margin-bottom:clamp(18px,3vw,28px);font-size:clamp(15px,2vw,17px)}
+.hero{padding:clamp(28px,6vw,64px) 0 clamp(64px,9vw,104px)}
+.hero .amt{font-size:clamp(56px,11vw,104px)}
+.hero p{font-size:clamp(15px,2.2vw,18px);margin-top:12px;line-height:1.55}
+.search{margin-top:clamp(20px,3vw,32px);height:clamp(52px,7vw,60px)}
+.grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:clamp(16px,2.4vw,28px)}
+.cb{padding:18px 20px 20px;gap:4px}
+.trust{margin-top:-32px;gap:clamp(10px,2vw,16px)}.trust div{padding:18px 20px}
+.tiles,.steps{gap:clamp(14px,2.4vw,24px)}.step,.tile{padding:clamp(20px,3vw,28px)}
+footer{margin-top:clamp(56px,8vw,96px);padding-top:clamp(36px,5vw,56px)}
+img,svg{max-width:100%}
+@media(min-width:641px){dialog{width:min(560px,92vw)}dialog.wide{width:min(720px,92vw)}}
+@media(max-width:640px){.hero .wrap{grid-template-columns:1fr;position:relative}.hero .wrap>svg{position:absolute;right:clamp(12px,4vw,24px);top:-6px;width:104px}.hero .amt{padding-top:4px}.scroll{padding:6px 18px 24px}.cta{padding-left:18px;padding-right:18px}.chips{margin:0 calc(-1*clamp(16px,4vw,32px));padding-left:clamp(16px,4vw,32px);padding-right:clamp(16px,4vw,32px)}.nav{height:60px}}
+.chip{flex:0 0 auto}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,2.4vw,24px)}
+@media(min-width:700px){.grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}}
+@media(max-width:699px){
+.card{border-radius:20px}
+.ph{aspect-ratio:4/3;font-size:40px}
+.mini{width:28px;height:28px;top:8px;left:8px;font-size:13px}
+.tag{top:8px;right:8px;font-size:11px;padding:1px 9px}
+.cb{padding:12px 12px 14px;gap:2px}
+.cb h3{font-size:16px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cb p{font-size:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cb .pr{padding-top:8px;gap:2px 6px}.pr b{font-size:16px}.pr s{font-size:12px}.off{font-size:11px;padding:0 6px}
+}
+.seats{display:flex;gap:6px;margin-top:6px}.seat{width:14px;height:14px;border-radius:50%;background:var(--s2);border:2px solid var(--line)}.seat.f{background:var(--blue);border-color:var(--blue)}
+
+:root[data-theme=dark]{--bg:#131314;--s1:#1e1f20;--s2:#2d2f31;--text:#e3e3e3;--muted:#c4c7c5;--line:#444746;--blue:#a8c7fa;--blue-d:#d3e3fd;--blue-bg:#1d2c44;--green:#6dd58c;--green-bg:#0f3d1f;--warm:#2b2415;--warm2:#3d3217;--red:#f2b8b5;color-scheme:dark}
+:root[data-theme=dark] .btn{color:#062e6f}:root[data-theme=dark] .btn.g{color:#0a3818}:root[data-theme=dark] .btn.o{color:var(--blue)}
+:root[data-theme=light]{--bg:#fff;--s1:#f1f3f9;--s2:#e8eaf0;--text:#1f1f1f;--muted:#5f6368;--line:#c4c7c5;--blue:#0b57d0;--blue-d:#0842a0;--blue-bg:#e9eef6;--green:#146c2e;--green-bg:#c4eed0;--warm:#fef7e0;--warm2:#fde9b0;--red:#b3261e;color-scheme:light}
+:root[data-theme=light] .btn{color:#fff}:root[data-theme=light] .btn.o{color:var(--blue)}
+.ib{width:40px;height:40px;border-radius:50%;border:0;background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer;flex:none}.ib:hover{background:rgba(127,127,127,.18)}.ib svg{width:22px;height:22px;fill:currentColor}
+.avb{width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:500;font-size:15px}
+:root[data-theme=dark] .avb,.dk .avb{color:#062e6f}
+#scrim{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:40;opacity:0;pointer-events:none;transition:opacity .25s var(--ease)}#scrim.on{opacity:1;pointer-events:auto}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(360px,92vw);background:var(--bg);color:var(--text);z-index:41;transform:translateX(100%);visibility:hidden;transition:transform .3s var(--ease),visibility 0s .3s;display:flex;flex-direction:column;box-shadow:var(--sh2);border-radius:28px 0 0 28px;padding-top:env(safe-area-inset-top)}
+#drawer.on{transform:none;visibility:visible;transition:transform .3s var(--ease)}
+.dr-h{display:flex;align-items:center;gap:12px;padding:18px 16px 12px}.dr-h .avb{width:48px;height:48px;font-size:20px}.dr-h b{display:block;font-weight:500}.dr-h small{color:var(--muted)}
+.dr-b{overflow-y:auto;flex:1;padding:4px 12px 12px}
+.mi{display:flex;align-items:center;gap:14px;width:100%;text-align:left;border:0;background:none;color:inherit;font:inherit;padding:13px 14px;border-radius:16px;cursor:pointer}.mi:hover{background:var(--s1)}.mi svg{width:22px;height:22px;fill:var(--muted);flex:none}.mi span{flex:1}.mi em{font-style:normal;font-size:11px;background:var(--warm2);color:var(--text);border-radius:8px;padding:1px 8px}
+.dr-s{font-size:12px;color:var(--muted);padding:14px 14px 4px;text-transform:uppercase;letter-spacing:.05em}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--s1);border-radius:100px;padding:4px;margin:6px 6px}.seg button{border:0;background:none;color:inherit;font:inherit;font-size:13px;padding:8px 4px;border-radius:100px;cursor:pointer}.seg button[aria-pressed=true]{background:var(--blue);color:#fff}
+:root[data-theme=dark] .seg button[aria-pressed=true]{color:#062e6f}
+.li{display:flex;align-items:center;gap:12px;background:var(--s1);border-radius:16px;padding:12px 14px;margin-top:10px}.li>div{flex:1;min-width:0}.li b{font-weight:500}.li small{display:block;color:var(--muted);font-size:12px}.li button{border:0;background:none;color:var(--blue);font:inherit;font-size:13px;cursor:pointer;padding:4px 6px}
+.bdg{font-size:11px;border-radius:8px;padding:2px 8px;background:var(--warm2);color:var(--text)}.bdg.ok{background:var(--green-bg);color:var(--green)}
+.tg{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}.tg input{width:20px;height:20px;accent-color:var(--blue)}
+.bar2{height:8px;border-radius:8px;background:var(--s2);overflow:hidden;margin:8px 0}.bar2 i{display:block;height:100%;background:var(--blue)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .avb,:root:not([data-theme=light]) .seg button[aria-pressed=true]{color:#062e6f}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><mask id="lm" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/><circle cx="8" cy="50" r="9"/><circle cx="92" cy="50" r="9"/></mask></defs>
+<symbol id="lg" viewBox="0 0 100 100"><rect x="8" y="20" width="84" height="60" rx="14" fill="#1a73e8" mask="url(#lm)"/><path d="M33 40l17 22 17-22" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="84" cy="22" r="11" fill="#fbbc04"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24"><path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></symbol>
+<symbol id="i-people" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M20 2H4c-1 0-2 .9-2 2v3.01c0 .72.43 1.34 1 1.69V20c0 1.1 1.1 2 2 2h14c.9 0 2-.9 2-2V8.7c.57-.35 1-.97 1-1.69V4c0-1.1-1-2-2-2zm-5 12H9v-2h6v2zm5-7H4V4h16v3z"/></symbol>
+<symbol id="i-renew" viewBox="0 0 24 24"><path d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></symbol>
+<symbol id="i-group" viewBox="0 0 24 24"><path d="M8 10H5V7H3v3H0v2h3v3h2v-3h3v-2zm10 1c1.66 0 2.99-1.34 2.99-3S19.66 5 18 5c-.32 0-.63.05-.91.14.57.81.9 1.79.9 2.86s-.34 2.04-.9 2.86c.28.09.59.14.91.14zm-5 0c1.66 0 2.99-1.34 2.99-3S14.66 5 13 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm6.62 2.16c.83.73 1.38 1.66 1.38 2.84v2h3v-2c0-1.54-2.37-2.49-4.38-2.84zM13 13c-2 0-6 1-6 3v2h12v-2c0-2-4-3-6-3z"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></symbol></svg>
+<div id="splash" role="presentation"><svg class="sp-l" viewBox="0 0 100 100" aria-hidden="true"><use href="#lg" width="100" height="100"/></svg><b>Vouchly</b><span class="beta">BETA</span><div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+<script>try{if(sessionStorage.getItem("vsp"))document.getElementById("splash").remove();else sessionStorage.setItem("vsp","1")}catch(e){}</script>
+<header id="hd"><div class="wrap nav">
+<a class="logo" href="#top" aria-label="Vouchly home"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#lg" width="100" height="100"/></svg>Vouchly <span class="beta">BETA</span></a>
+<nav aria-label="Main"><a class="lnk" href="#market">Marketplace</a><a class="lnk" href="#wtb">Want to buy</a><a class="lnk" href="#trust">Trust</a><a class="lnk" href="#how">How it works</a><a class="lnk" href="#groups">Group plans</a><a class="lnk" href="#sell-what">What to sell</a><a class="lnk" href="#faq">FAQ</a><button class="lnk" data-legal="help" style="border:0;background:none;cursor:pointer;font-family:inherit">Help</button><button class="btn" id="sellTop">Sell a voucher</button></nav>
+<button class="ib" id="thBtn" aria-label="Change theme" title="Theme"></button><button class="ib" id="menuBtn" aria-label="Open account menu" aria-haspopup="true" aria-expanded="false"><span class="avb" id="avB">V</span></button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap"><div>
+<div class="amt" id="amt">₹0</div><div class="lbl">Total savings on offer</div>
+<p>Buy and sell gift cards, coupons and subscription vouchers, or split an official group plan. You set the price, and the code stays locked until it is paid for.</p>
+<form class="search" role="search" id="sf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg><input id="q" type="search" placeholder="Search gift cards, coupons, subscriptions…" aria-label="Search vouchers"></form>
+</div>
+<svg viewBox="0 0 240 200" aria-hidden="true"><ellipse cx="120" cy="100" rx="110" ry="84" fill="#fff" opacity=".45"/><path d="M118 72l78-34v60l-78 24z" fill="#e8710a"/><circle cx="160" cy="60" r="30" fill="#fbbc04"/><circle cx="160" cy="60" r="21" fill="none" stroke="#f29900" stroke-width="5"/><rect x="82" y="108" width="82" height="62" fill="#f9ab00"/><rect x="123" y="108" width="41" height="62" fill="#e37400"/><circle cx="102" cy="132" r="8" fill="none" stroke="#fde293" stroke-width="4"/><rect x="70" y="72" width="36" height="30" rx="3" fill="#8ab4f8" transform="rotate(-18 88 87)"/><circle cx="42" cy="84" r="12" fill="#fbbc04" transform="rotate(-20 42 84)"/><path d="M200 130l5 11 11 5-11 5-5 11-5-11-11-5 11-5z" fill="#fbbc04"/></svg>
+</div></section>
+
+<div class="wrap"><div class="trust">
+<div><i><svg class="ic" aria-hidden="true"><use href="#i-lock" width="24" height="24"/></svg></i><span><b>Code locked until paid</b> Buyers see it only after payment</span></div>
+<div><i><svg class="ic" aria-hidden="true"><use href="#i-flag" width="24" height="24"/></svg></i><span><b>Report any listing</b> Every listing has a report link</span></div>
+<div><i><svg class="ic" aria-hidden="true"><use href="#i-shield" width="24" height="24"/></svg></i><span><b>Grievance officer</b> Complaints answered within 24 hours</span></div></div></div>
+<section class="sec wrap" id="mineS" hidden><h2>Your listings</h2><p class="sub">Codes stay hidden until a buyer pays.</p><div class="hs" id="mine"></div></section>
+
+<section class="sec wrap" id="market">
+<div class="bar"><div><h2>Marketplace</h2><p class="sub">Codes are locked until payment is confirmed.</p></div>
+<select id="sort" aria-label="Sort listings"><option value="new">Newest first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="disc">Biggest discount</option></select></div>
+<div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+<div class="grid" id="grid" aria-live="polite"></div>
+</section>
+
+<section class="sec wrap" id="groups"><div class="bar"><div><h2>Group plans</h2><p class="sub">Split an official multi-user plan. Everyone gets their own seat and their own login.</p></div><button class="btn" id="newGroup" style="margin-bottom:clamp(18px,3vw,28px)">Start a group</button></div>
+<div class="grid" id="ggrid"></div>
+<p class="hint" style="margin-top:16px">No passwords are ever shared. Members are added through the service's official invite feature. See the <a href="#" data-legal="groups">Group Plan Terms</a>.</p></section>
+<section class="sec wrap" id="sell-what"><h2>What you can sell</h2><p class="sub">Only list items you own and are allowed to transfer.</p><div class="tiles">
+<button class="tile" data-fcat="Gift cards"><em><svg class="ic" aria-hidden="true"><use href="#i-gift" width="24" height="24"/></svg></em><div><b>Gift cards</b><span>Unused cards with a code and balance. Check the issuer's resale terms.</span></div></button>
+<button class="tile" data-fcat="Coupons"><em><svg class="ic" aria-hidden="true"><use href="#i-tag" width="24" height="24"/></svg></em><div><b>Coupons and offers</b><span>Single-use discount or cashback codes that can be transferred.</span></div></button>
+<button class="tile" data-fcat="Subscriptions"><em><svg class="ic" aria-hidden="true"><use href="#i-renew" width="24" height="24"/></svg></em><div><b>Subscription vouchers</b><span>Transferable gift subscriptions. Never account logins or passwords.</span></div></button>
+<button class="tile" data-scroll="groups"><em><svg class="ic" aria-hidden="true"><use href="#i-group" width="24" height="24"/></svg></em><div><b>Group plans</b><span>Split an official team or multi-seat plan. Each member gets their own seat.</span></div></button>
+</div></section>
+<section class="sec wrap" id="trust"><h2>Built for trust</h2><p class="sub">Every rupee and every code is protected by a clear process.</p><div class="steps">
+<div class="step"><i>1</i><h3>Verified sellers</h3><p>PAN and bank/UPI penny-drop check before a seller can publish. Optional corporate or college email badge.</p></div>
+<div class="step"><i>2</i><h3>Regulated escrow</h3><p>Money is held by an RBI-authorised payment gateway, not by Vouchly, and split to the seller after the dispute window.</p></div>
+<div class="step"><i>3</i><h3>Screen-record proof</h3><p>Buyers record the unlock-and-redeem. Valid proof gets a refund; no proof, no refund.</p></div>
+<div class="step"><i>4</i><h3>Payout tiers</h3><p>New sellers: 48-hour hold. After 10 clean trades with 0 disputes: 15-minute hold.</p></div>
+<div class="step"><i>5</i><h3>Limits and screening</h3><p>₹5,000 cap per listing. Banned: Google Ads credits, account logins, stolen or non-transferable codes.</p></div>
+<div class="step"><i>6</i><h3>Grievance officer</h3><p>Complaints acknowledged in 24 hours, resolved in 15 days. See Grievance officer.</p></div></div>
+<div class="note" style="margin-top:14px"><b>Fees:</b> buyers pay ₹0 platform fee. Sellers pay 5% on completed sales. Any TDS (0.1% e-commerce TDS above ₹5 lakh a year) or GST TCS (0.5%) that applies is deducted and shown in your payout statement.</div></section>
+<section class="sec wrap" id="wtb"><div class="bar"><div><h2>Want to buy</h2><p class="sub">Tell sellers what you need. Matching sellers are notified by email.</p></div><button class="btn" id="wtbBtn" style="margin-bottom:clamp(18px,3vw,28px)">Post a request</button></div><div class="grid" id="wgrid"></div></section>
+<section class="sec wrap" id="how"><h2>How it works</h2><p class="sub">A simple pay-to-unlock flow.</p>
+<div class="steps">
+<div class="step"><i>1</i><h3>List your offer</h3><p>Add the code, images, details and your own price. The code is never shown publicly.</p></div>
+<div class="step"><i>2</i><h3>Buyer pays first</h3><p>The buyer pays your asking price. Until payment succeeds, the code stays locked.</p></div>
+<div class="step"><i>3</i><h3>Code unlocks</h3><p>The buyer sees the code and redeems it. You are paid, minus a 5% fee.</p></div></div></section>
+
+<section class="sec wrap" id="faq"><h2>Questions</h2><p class="sub"></p>
+<details class="f"><summary>Is this a real marketplace?</summary><p>Not yet. Vouchly Beta tests whether people want this. Payments are simulated and your listings are saved only in your browser.</p></details>
+<details class="f"><summary>How do I know a code is valid?</summary><p>The full version will verify codes and hold payouts during a dispute window. Never rely on a code shown in this beta.</p></details>
+<details class="f"><summary>Is reselling vouchers allowed?</summary><p>Many offers say they are non-transferable. Sellers must check the issuer's terms before listing.</p></details>
+<details class="f"><summary>What can't I list?</summary><p>Stolen, expired, redeemed or duplicate codes, account logins, personal data, and anything illegal. See the Prohibited Items policy.</p></details>
+<details class="f"><summary>Do you share account passwords?</summary><p>No. Most services forbid sharing logins, and it can get accounts banned. Group plans use the service's official seat or invite feature, so each member signs in with their own account.</p></details>
+<details class="f"><summary>Which items can I list in the beta?</summary><p>Gift cards, single-use coupons and transferable subscription vouchers up to ₹5,000 each, plus seats in official group plans. Other categories are closed for now.</p></details>
+<details class="f"><summary>What are the fees and taxes?</summary><p>Sellers pay a 5% fee on completed sales. Sellers are responsible for their own income tax and GST. See the Seller Agreement.</p></details>
+<details class="f"><summary>How do I report a problem?</summary><p>Use the report link on a listing, or contact the Grievance Officer. Complaints are acknowledged within 24 hours.</p></details></section>
+</main>
+
+<footer><div class="wrap">
+<div class="fcols">
+<div><h4>Marketplace</h4><button data-fcat="Gift cards">Gift cards</button><button data-fcat="Coupons">Coupons</button></div>
+<div><h4>Company</h4><button data-legal="about">About Vouchly</button><button data-legal="contact">Contact us</button><button data-legal="help">Help centre</button><button data-legal="trust">Trust &amp; safety</button><button data-legal="grievance">Grievance officer</button><button data-legal="compliance">Compliance</button></div>
+<div><h4>Legal</h4><button data-legal="terms">Terms of Service</button><button data-legal="privacy">Privacy Policy</button><button data-legal="copyright">Copyright &amp; IP</button><button data-legal="disclaimer">Disclaimer</button><button data-legal="prohibited">Prohibited Items</button><button data-legal="refund">Refunds &amp; Disputes</button><button data-legal="seller">Seller Agreement</button><button data-legal="groups">Group Plan Terms</button><button data-legal="cookies">Cookie Policy</button></div></div>
+<p>&copy; <span id="yr">2026</span> Vouchly (Beta). All rights reserved. Site design, text and code are the property of Vouchly.</p>
+<p id="fOp"></p>
+<p>Vouchly is independent and is not affiliated with, endorsed by or sponsored by Google LLC, Google Pay or any brand shown. All trademarks, logos and brand names belong to their owners and are used only to identify user-listed offers.</p>
+<p>Not legal, tax or financial advice. Vouchly is a marketplace where users list items. We do not issue vouchers and do not guarantee their validity or balance.</p>
+</div></footer>
+
+<dialog id="wtbD"><div class="dh"><button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button><h3>Post a request</h3></div>
+<form id="wtbF" style="display:flex;flex-direction:column;min-height:0;flex:1" novalidate><div class="scroll">
+<label for="wNeed" style="margin-top:4px">What do you need?</label><input id="wNeed" placeholder="₹500 Swiggy voucher" autocomplete="off">
+<label for="wMax">Maximum price (₹)</label><input id="wMax" type="number" min="1" inputmode="numeric" placeholder="425">
+<label for="wMail">Email for alerts</label><input id="wMail" type="email" placeholder="you@example.com" autocomplete="email">
+<label class="chk"><input type="checkbox" id="wOk"><span>I agree to receive alerts about this request and accept the <a href="#" data-legal="privacy">Privacy Policy</a>. I can withdraw consent any time.</span></label>
+<div class="err" id="wErr" role="alert"></div></div><div class="cta"><button class="btn full" type="submit">Post request</button></div></form></dialog>
+<div id="scrim"></div>
+<aside id="drawer" aria-label="Account menu" aria-hidden="true"></aside>
+<dialog id="acctD" class="wide"><div class="dh"><button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button><h3 id="aT"></h3></div><div class="scroll" id="aB"></div></dialog>
+<dialog id="itemD" aria-label="Voucher details"></dialog>
+
+<dialog id="sellD"><div class="dh"><button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button><h3>Sell a voucher</h3></div>
+<form id="sellF" style="display:flex;flex-direction:column;min-height:0;flex:1" novalidate>
+<div class="scroll">
+<div class="note" style="margin-top:4px">Phase 1 beta: gift cards, coupons and transferable subscription vouchers up to ₹5,000 per listing. Sellers are KYC-verified before payout.</div>
+<label for="sPaste">Paste GPay / PhonePe offer text (optional)</label><textarea id="sPaste" style="min-height:64px" placeholder="Paste the offer message here and tap Auto-fill"></textarea><button type="button" class="btn o" id="pBtn" style="margin-top:8px;height:36px">Auto-fill</button>
+<label for="sBrand">Brand or merchant</label><input id="sBrand" placeholder="Organic India" autocomplete="off">
+<label for="sTitle">Offer title</label><input id="sTitle" placeholder="Flat 25% Off" autocomplete="off">
+<label for="sSub">Short description</label><input id="sSub" placeholder="On Organic India Products" autocomplete="off">
+<label for="sCat">Category</label><select id="sCat" class="sel"><option>Gift cards</option><option>Coupons</option><option>Subscriptions</option><option>Shopping</option><option>Food</option><option>Fashion</option><option>Entertainment</option><option>Travel</option><option>Other</option></select><div class="note" id="catNote" hidden></div>
+<div class="row"><div><label for="sFace">Face value (₹)</label><input id="sFace" type="number" min="10" inputmode="numeric" placeholder="500"></div><div><label for="sPrice">Your price (₹)</label><input id="sPrice" type="number" min="1" inputmode="numeric" placeholder="400"></div></div>
+<label for="sCode">Coupon / gift code</label><input id="sCode" autocomplete="off" placeholder="GPAY-AD2H0K"><p class="hint">Hidden from buyers until they pay.</p>
+<label for="sExp">Expires on</label><input id="sExp" type="date">
+<label for="sDet">Details (one point per line)</label><textarea id="sDet" placeholder="Offer applicable on Organic India teas.&#10;Flat 25% off on all orders.&#10;Valid for all users."></textarea>
+<label for="sLink">Redeem link (optional)</label><input id="sLink" type="url" placeholder="https://" autocomplete="off">
+<label for="sUrls">Image links (optional, one per line)</label><textarea id="sUrls" style="min-height:64px" placeholder="https://…/image.jpg"></textarea>
+<label for="sFile">Or upload images (up to 5)</label><input id="sFile" type="file" accept="image/*" multiple><div class="thumbs" id="thumbs"></div>
+<label for="sName">Your legal name (as on PAN)</label><input id="sName" autocomplete="name" placeholder="Full name">
+<div class="row"><div><label for="sPan">PAN</label><input id="sPan" maxlength="10" autocomplete="off" placeholder="ABCDE1234F" style="text-transform:uppercase"></div><div><label for="sState">State</label><input id="sState" placeholder="Maharashtra" autocomplete="address-level1"></div></div><p class="hint">Needed for KYC, tax rules and the sale receipt. Your phone number is never shown to buyers.</p>
+<label for="sUpi">Your UPI ID for payout</label><input id="sUpi" placeholder="name@bank" autocomplete="off">
+<div class="sum"><div><span>You receive after 5% fee (before any TDS or TCS)</span><b id="sNet">₹0</b></div></div>
+<label class="chk"><input type="checkbox" id="sOk"><span>I own this item, the code is valid and unused, and I have the right to sell it.</span></label>
+<label class="chk"><input type="checkbox" id="sOk2"><span>The issuer's or program's terms allow me to transfer or sell it. It is not stolen and not an account login.</span></label>
+<label class="chk"><input type="checkbox" id="sOk4"><span>I consent to Vouchly verifying my PAN and bank/UPI details, and to my legal name and state appearing on the buyer's receipt (Consumer Protection (E-Commerce) Rules, 2020).</span></label>
+<label class="chk"><input type="checkbox" id="sOk3"><span>I am 18 or older, I am responsible for my own taxes, and I accept the <a href="#" data-legal="terms">Terms</a>, <a href="#" data-legal="seller">Seller Agreement</a> and <a href="#" data-legal="prohibited">Prohibited Items</a> policy.</span></label>
+<div class="err" id="sErr" role="alert"></div></div>
+<div class="cta"><button class="btn full" type="submit">List voucher</button></div></form></dialog>
+
+<dialog id="groupD"><div class="dh"><button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button><h3>Start a group</h3></div>
+<form id="groupF" style="display:flex;flex-direction:column;min-height:0;flex:1" novalidate><div class="scroll">
+<div class="note" style="margin-top:4px">Start a group only for an official multi-user plan whose terms allow adding members. Never share your own password.</div>
+<label for="gSvc">Service name</label><input id="gSvc" placeholder="DesignHub" autocomplete="off">
+<label for="gPlan">Plan name</label><input id="gPlan" placeholder="Team plan, 3 seats" autocomplete="off">
+<label for="gLink">Official plan page link</label><input id="gLink" type="url" placeholder="https://" autocomplete="off">
+<div class="row"><div><label for="gTot">Total price (₹)</label><input id="gTot" type="number" min="1" inputmode="numeric" placeholder="1200"></div><div><label for="gSeats">Total seats</label><select id="gSeats" class="sel"><option>2</option><option selected>3</option><option>4</option><option>5</option></select></div></div>
+<label for="gCyc">Billing cycle</label><select id="gCyc" class="sel"><option>Monthly</option><option>Yearly</option></select>
+<div class="sum"><div><span>Each seat pays</span><b id="gPer">₹0</b></div></div>
+<label for="gName">Your legal name (as on PAN)</label><input id="gName" autocomplete="name" placeholder="Full name">
+<div class="row"><div><label for="gPan">PAN</label><input id="gPan" maxlength="10" autocomplete="off" placeholder="ABCDE1234F" style="text-transform:uppercase"></div><div><label for="gState">State</label><input id="gState" placeholder="Maharashtra" autocomplete="address-level1"></div></div>
+<label for="gUpi">Your UPI ID for payout</label><input id="gUpi" placeholder="name@bank" autocomplete="off">
+<div class="note">Payout: member payments are held by an RBI-authorised gateway and released to you month by month while each member still has an active seat. Yearly plans are not paid out upfront. If you cancel or remove a member early, the unused months are refunded and may be recovered from you. First-time hosts have a longer hold.</div>
+<label for="gDet">Notes for members (one point per line)</label><textarea id="gDet" placeholder="Seats start on the 1st of the month.&#10;Invites are sent within 24 hours."></textarea>
+<label class="chk"><input type="checkbox" id="gOk1"><span>This is an official multi-user plan, and the provider's current terms allow me to add these members, including people outside my household or organisation.</span></label>
+<label class="chk"><input type="checkbox" id="gOk2"><span>I will add members only through the official invite or seat feature. I will not share my own password, OTP or login.</span></label>
+<label class="chk"><input type="checkbox" id="gOk4"><span>I agree to PAN and bank/UPI verification, to the staged payout and refund terms above, and to my legal name and state appearing on members' receipts. Tax rules (TDS/GST TCS) may apply to payouts.</span></label>
+<label class="chk"><input type="checkbox" id="gOk3"><span>I am the paying account holder, I am 18 or older, and I accept the <a href="#" data-legal="groups">Group Plan Terms</a> and <a href="#" data-legal="terms">Terms</a>.</span></label>
+<div class="err" id="gErr" role="alert"></div></div>
+<div class="cta"><button class="btn full" type="submit">Create group</button></div></form></dialog>
+<dialog id="legalD" class="wide"><div class="dh"><h3 id="lT"></h3><button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button></div><div class="scroll lg" id="lB"></div></dialog>
+<div class="ck" id="ck" hidden role="dialog" aria-label="Cookie notice"><p>We keep your listings and settings in your browser. No tracking or advertising cookies. <a href="#" data-legal="cookies">Learn more</a></p><div><button class="btn" id="ckOk">Got it</button></div></div>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+(function(){
+var KEY="vouchly_beta_v2",PAL=["#1a73e8","#188038","#e37400","#d93025","#9334e6","#129eaf","#c26401"],
+HID=["Referral codes","Software & keys","Digital products"],CATS=["All","Gift cards","Coupons","Subscriptions","Shopping","Food","Fashion","Entertainment","Travel","Other"],CAP=5000,BLOCK=/google\s*ads|adwords|ads?\s*credit|password|login\s*(id|details)|account\s*(share|for\s*sale)|cracked|netflix\s*(account|profile)|spotify\s*(account|family)|youtube\s*(premium)?\s*(account|family)|google\s*one\s*family/i,HOUSE=/youtube|spotify|netflix|google\s*one|prime\s*video|disney|hotstar|apple\s*(one|music)/i,
+CFG={name:"[Your registered business name]",addr:"[Registered office address, City, State, PIN]",email:"support@yourdomain.com",officer:"[Grievance Officer full name]",oemail:"grievance@yourdomain.com",city:"[City]"},
+NOTES={"Gift cards":"Check the issuer's terms. Many issuers bar transfer for value, and some promotional vouchers say so in terms. Do not list a card unless its terms allow transfer.","Coupons":"List only single-use codes you may transfer. Codes tied to your phone number or account usually cannot be resold.","Subscriptions":"List only transferable vouchers or gift codes. Selling account logins or shared accounts is banned. To split a plan, use Group plans."},
+U="https://images.unsplash.com/",Q="?auto=format&fit=crop&w=900&q=70",
+seed=[
+{id:"s1",brand:"Organic India",title:"Flat 25% Off",sub:"On Organic India Products",cat:"Coupons",face:400,price:300,exp:"2027-01-07",code:"GPAY-AD2H0K",seller:"Aarav M.",t:6,imgs:[U+"photo-1556679343-c7306c1976bc"+Q,U+"photo-1597481499750-3e6b22637e12"+Q],det:["Expires on January 7, 2027","Rejuvenate yourself with the finest herbal and green teas.","Offer applicable on Organic India teas.","Flat 25% off on all orders.","Valid for all users."]},
+{id:"s2",brand:"Amazon",title:"₹1,000 gift card",sub:"Amazon.in balance",cat:"Gift cards",face:1000,price:880,exp:"2027-06-30",code:"AMZN-4HJ8-2PWE-TT09",seller:"Isha K.",t:5,imgs:[U+"photo-1607082348824-0a96f2a4b9da"+Q],det:["Demo listing: not a real card","Valid on Amazon.in","No minimum order value","Seller confirms the issuer's terms allow transfer. Vouchly does not verify this"]},
+{id:"s3",brand:"Swiggy",title:"₹300 off on food",sub:"On orders above ₹499",cat:"Food",face:300,price:240,exp:"2026-12-31",code:"SWGY-0BXC-5MMN",seller:"Kabir D.",t:4,imgs:[U+"photo-1504674900247-0877df9cc836"+Q],det:["Valid on food orders only","Minimum order ₹499","One use per account"]},
+{id:"s4",brand:"Myntra",title:"Flat 30% Off",sub:"On fashion and lifestyle",cat:"Fashion",face:750,price:560,exp:"2027-02-28",code:"MYN-30-KV82X",seller:"Neha S.",t:3,imgs:[U+"photo-1441986300917-64674bd600d8"+Q],det:["Maximum discount ₹750","Not valid on already discounted items","Valid for all users"]},
+{id:"s5",brand:"BookMyShow",title:"₹250 movie voucher",sub:"On 2 tickets or more",cat:"Entertainment",face:250,price:190,exp:"2027-03-15",code:"BMS-FILM-77QPA",seller:"Rohan P.",t:2,imgs:[U+"photo-1489599849927-2ee91cede3ba"+Q],det:["Valid on movie tickets","Minimum 2 tickets","Not valid on premium formats"]},
+{id:"s6",brand:"MakeMyTrip",title:"₹1,500 off flights",sub:"Domestic bookings",cat:"Travel",face:1500,price:1150,exp:"2027-04-30",code:"MMT-FLY-9921-ZK",seller:"Sana T.",t:1,imgs:[U+"photo-1436491865332-7a61a109cc05"+Q],det:["Valid on domestic flights","Minimum booking ₹6,000","Valid once per user"]},
+{id:"s10",brand:"StreamBox",title:"3-month gift subscription",sub:"Redeemable by new subscribers",cat:"Subscriptions",face:897,price:650,exp:"2027-04-10",code:"SBOX-3M-GIFT-8821",seller:"Tara L.",t:0,imgs:[U+"photo-1522202176988-66273c2fd55f"+Q],det:["Demo listing: not a real code","Transferable gift code, not an account login","Valid for new subscribers only"]}
+],
+seedG=[
+{id:"g1",service:"DesignHub",plan:"Team plan, 3 seats",link:"https://example.com/designhub/pricing",total:1200,seats:3,cycle:"Monthly",host:"Aarav M.",members:["Aarav M.","Isha K."],det:["Demo group: not a real plan","Each member gets their own seat and login","Host confirms the plan allows outside members"],t:3},
+{id:"g2",service:"CloudNotes",plan:"Business plan, 4 seats",link:"https://example.com/cloudnotes/business",total:1600,seats:4,cycle:"Monthly",host:"Neha S.",members:["Neha S."],det:["Demo group: not a real plan","Invites sent within 24 hours of the group filling"],t:2},
+{id:"g3",service:"StudyPlus",plan:"Annual team plan, 3 seats",link:"https://example.com/studyplus/team",total:5400,seats:3,cycle:"Yearly",host:"Rohan P.",members:["Rohan P.","Kabir D."],det:["Demo group: not a real plan","Seats run for 12 months from the start date"],t:1}
+],S,cat="All",first=true,sImgs=[];
+var $=function(i){return document.getElementById(i)};
+var X='<svg viewBox="0 0 24 24"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg>';
+var CP='<svg viewBox="0 0 24 24"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>';
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function inr(n){return "₹"+Number(n).toLocaleString("en-IN")}
+function col(b){var h=0;for(var k=0;k<b.length;k++)h=(h*31+b.charCodeAt(k))>>>0;return PAL[h%PAL.length]}
+function toast(m){var t=$("toast");t.textContent=m;t.hidden=false;t.style.animation="none";void t.offsetWidth;t.style.animation="";clearTimeout(toast.h);toast.h=setTimeout(function(){t.hidden=true},3200)}
+function mask(c){return c.replace(/[A-Za-z0-9]/g,"•")}
+function load(){try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){S=null}if(!S||!S.items)S={items:seed.slice(),sold:12};if(!S.groups)S.groups=seedG.slice()}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){toast("Could not save: browser storage is full or blocked.")}}
+function openD(d){if(!d.open)d.showModal();document.body.style.overflow="hidden"}
+function closeD(d){if(!d.open||d.classList.contains("closing"))return;d.classList.add("closing");setTimeout(function(){d.classList.remove("closing");d.close();if(!document.querySelector("dialog[open]"))document.body.style.overflow=""},220)}
+function imgTag(s){return '<img src="'+esc(s)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onload="this.classList.add(\'ld\')" onerror="this.remove()">'}
+function ph(i,cls){var c=col(i.brand);return '<div class="'+cls+'" style="background:linear-gradient(135deg,'+c+','+c+'aa)"><span>'+esc(i.brand[0].toUpperCase())+'</span>'+(i.imgs&&i.imgs[0]?imgTag(i.imgs[0]):'')+'</div>'}
+function disc(i){return Math.round((i.face-i.price)/i.face*100)}
+function card(i,n){var d=disc(i);
+return '<article class="card'+(first?' in':'')+'" style="--i:'+n+'" tabindex="0" role="button" data-open="'+i.id+'" aria-label="'+esc(i.brand+' '+i.title)+'">'+
+'<div class="ph" style="background:linear-gradient(135deg,'+col(i.brand)+','+col(i.brand)+'aa)"><span>'+esc(i.brand[0].toUpperCase())+'</span>'+(i.imgs&&i.imgs[0]?imgTag(i.imgs[0]):'')+
+'<div class="mini" style="color:'+col(i.brand)+'">'+esc(i.brand[0].toUpperCase())+'</div>'+((Date.now()-(i.t>1e10?i.t:0)<864e5*3||i.seller==="You"||i.t===6)?'<span class="tag">New</span>':'')+'</div>'+
+'<div class="cb"><h3>'+esc(i.title)+'</h3><p>'+esc(i.sub||i.brand)+'</p><div class="pr"><b>'+inr(i.price)+'</b>'+(d>0?'<s>'+inr(i.face)+'</s><span class="off">'+d+'% off</span>':'')+'</div></div></article>'}
+function chips(){$("chips").innerHTML=CATS.map(function(c){return '<button class="chip" aria-pressed="'+(c===cat)+'" data-cat="'+c+'">'+c+'</button>'}).join("")}
+function counter(to){var el=$("amt"),t0=null,from=counter.v||0;counter.v=to;
+if(matchMedia("(prefers-reduced-motion:reduce)").matches||from===to){el.textContent=inr(to);return}
+(function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/900),e=1-Math.pow(1-p,4);el.textContent=inr(Math.round(from+(to-from)*e));if(p<1)requestAnimationFrame(f)})(performance.now())}
+function render(){
+var q=$("q").value.trim().toLowerCase(),so=$("sort").value,act=S.items.filter(function(i){return !i.sold&&HID.indexOf(i.cat)<0});
+counter(act.reduce(function(s,i){return s+(i.face-i.price)},0));
+var mine=act.filter(function(i){return i.seller==="You"});
+$("mineS").hidden=!mine.length;$("mine").innerHTML=mine.map(function(i,n){return card(i,n)}).join("");
+var L=act.filter(function(i){return(cat==="All"||i.cat===cat)&&(!q||(i.brand+" "+i.title+" "+i.sub+" "+i.cat).toLowerCase().indexOf(q)>-1)});
+L.sort(function(a,b){return so==="low"?a.price-b.price:so==="high"?b.price-a.price:so==="disc"?disc(b)-disc(a):b.t-a.t});
+$("grid").innerHTML=L.length?L.map(function(i,n){return card(i,n)}).join(""):'<div class="empty">No vouchers match. Try another category, or <a href="#" id="emptySell">list one yourself</a>.</div>';
+renderG();first=false}
+
+function openItem(id){var i=S.items.filter(function(x){return x.id===id})[0];if(!i)return;var d=$("itemD"),mine=i.seller==="You",c=col(i.brand);
+var slides=(i.imgs&&i.imgs.length?i.imgs:[null]).map(function(s){return '<div class="sl" style="background:linear-gradient(135deg,'+c+','+c+'aa)"><span>'+esc(i.brand[0].toUpperCase())+'</span>'+(s?imgTag(s):'')+'</div>'}).join("");
+var n=(i.imgs||[]).length;
+function pill(on){return '<div class="pill'+(on?' on':'')+'"><span id="cv">'+(on?esc(i.code):mask(i.code))+'</span><button id="cpy" aria-label="Copy code"'+(on?'':' disabled')+'>'+CP+'</button></div>'}
+function main(){return '<div class="cw">'+(n>1?'<div class="cnt" id="cnt">1/'+n+'</div>':'')+'<div class="car" id="car">'+slides+'</div></div>'+
+'<h2 class="big">'+esc(i.title)+'</h2><div class="sb">'+esc(i.sub||"")+'</div><div class="pr2"><b>'+inr(i.price)+'</b><s>'+inr(i.face)+' value</s>'+(disc(i)>0?'<span class="off">'+disc(i)+'% off</span>':'')+'</div>'+pill(false)+
+'<details class="dt" open><summary>Details</summary><ul><li>Expires on '+esc(new Date(i.exp).toLocaleDateString("en-IN",{day:"numeric",month:"long",year:"numeric"}))+'</li>'+(i.det||[]).map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></details><p class="hint" style="margin-top:14px">Offer terms are set by the issuer, and many issuers restrict transfer for value. Vouchly does not verify them. <a href="mailto:'+CFG.email+'?subject='+encodeURIComponent("Report listing "+i.id)+'">Report this listing</a></p>'}
+function head(){return '<div class="dh"><button class="x" data-close aria-label="Close">'+X+'</button><div class="av" style="background:'+c+'">'+esc(i.brand[0].toUpperCase())+'</div><div class="ht"><b>'+esc(i.brand)+'</b><small>Listed by '+esc(i.seller)+'</small></div></div>'}
+d.innerHTML=head()+'<div class="scroll" id="iS">'+main()+'</div><div class="cta" id="iC"></div>';
+function swap(h,f){var s=$("iS");s.innerHTML=h;s.className="scroll swap";s.scrollTop=0;$("iC").innerHTML=f;setTimeout(function(){s.className="scroll"},400)}
+function cta(){$("iC").innerHTML=mine?'<button class="btn o full" id="del">Remove listing</button>':'<button class="btn full" id="buy">Buy for '+inr(i.price)+'</button>';
+if(mine)$("del").onclick=function(){S.items=S.items.filter(function(x){return x.id!==i.id});save();render();closeD(d);toast("Listing removed")};
+else $("buy").onclick=checkout}
+function checkout(){swap('<h2 class="big" style="font-size:28px;margin-top:8px">Checkout</h2><div class="sum"><div><span>'+esc(i.brand)+' · '+esc(i.title)+'</span><span>'+inr(i.price)+'</span></div><div><span>Platform fee (buyer)</span><span>₹0</span></div><div class="t"><span>Total</span><span>'+inr(i.price)+'</span></div></div>'+pill(false)+
+'<label for="bUpi">Pay from UPI ID (demo)</label><input id="bUpi" placeholder="you@bank" autocomplete="off"><label class="chk"><input type="checkbox" id="bOk"><span>I accept the <a href="#" data-legal="terms">Terms</a> and <a href="#" data-legal="refund">Refund policy</a>. Digital item: non-returnable unless the code is invalid or already used. Your money is held by an RBI-authorised gateway for the dispute window (48 hours for new sellers). To claim a refund you must screen-record from tapping Unlock until the code is entered in the merchant app. Payments are simulated in this beta.</span></label><div class="err" id="bErr" role="alert"></div>',
+'<button class="btn o" id="bk" style="height:56px">Back</button><button class="btn g full" id="pay">Pay '+inr(i.price)+'</button>');
+$("bk").onclick=function(){swap(main(),"");cta();bind()};
+$("pay").onclick=function(){var b=this;
+if(!/^[\w.\-]{2,}@[\w]{2,}$/.test($("bUpi").value.trim())){$("bErr").textContent="Enter a valid UPI ID, like name@bank.";return}
+if(!$("bOk").checked){$("bErr").textContent="Accept the terms to continue.";return}
+b.disabled=true;b.innerHTML='<span class="spin"></span>Processing';
+setTimeout(function(){i.sold=true;S.sold++;(S.buys=S.buys||[]).push({id:i.id,brand:i.brand,title:i.title,price:i.price,t:Date.now(),seller:i.sname||i.seller});save();render();
+swap('<div class="ok"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="25"/><path d="M29 41l8 8 15-17"/></svg><h4>Payment successful</h4><p class="hint">Start a screen recording now, then redeem. Dispute window: 48 hours. Receipt shows seller: '+esc(i.sname||i.seller)+', '+esc(i.sstate||"India")+'.</p></div>'+pill(false),
+(i.link?'<a class="btn full" href="'+esc(i.link)+'" target="_blank" rel="noopener noreferrer" style="text-decoration:none">Redeem now</a>':'<button class="btn full" data-close>Done</button>'));
+setTimeout(function(){var p=d.querySelector(".pill");p.classList.add("on");$("cv").textContent=i.code;$("cpy").disabled=false;bind()},350)},1500)}}
+function bind(){var car=$("car");if(car&&n>1)car.onscroll=function(){var k=Math.round(car.scrollLeft/(car.firstChild.offsetWidth+10));$("cnt").textContent=Math.min(n,k+1)+"/"+n};
+var cp=$("cpy");if(cp)cp.onclick=function(){var t=i.code;try{navigator.clipboard.writeText(t).then(function(){toast("Code copied")},function(){toast("Select the code to copy it")})}catch(e){toast("Select the code to copy it")}}}
+cta();bind();openD(d)}
+
+function per(g){return Math.ceil(g.total/g.seats)}
+function fee(v){return Math.ceil(v*0.05)}
+function seatsHtml(g){var h="";for(var k=0;k<g.seats;k++)h+='<i class="seat'+(k<g.members.length?' f':'')+'"></i>';return '<div class="seats" role="img" aria-label="'+g.members.length+' of '+g.seats+' seats filled">'+h+'</div>'}
+function gcard(g,n){var c=col(g.service),full=g.members.length>=g.seats,L=g.service[0].toUpperCase();
+return '<article class="card'+(first?' in':'')+'" style="--i:'+n+'" tabindex="0" role="button" data-gopen="'+g.id+'" aria-label="'+esc(g.service+' '+g.plan)+'"><div class="ph" style="background:linear-gradient(135deg,'+c+','+c+'aa)"><span>'+esc(L)+'</span><div class="mini" style="color:'+c+'">'+esc(L)+'</div><span class="tag">'+(full?'Full':(g.seats-g.members.length)+' left')+'</span></div><div class="cb"><h3>'+esc(g.service)+'</h3><p>'+esc(g.plan)+'</p>'+seatsHtml(g)+'<div class="pr"><b>'+inr(per(g))+'</b><s>per seat / '+(g.cycle==="Yearly"?'year':'month')+'</s></div></div></article>'}
+function renderG(){$("ggrid").innerHTML=S.groups.map(gcard).join("")}
+function openGroup(id){var g=S.groups.filter(function(x){return x.id===id})[0];if(!g)return;
+var d=$("itemD"),c=col(g.service),mine=g.host==="You",joined=g.members.indexOf("You")>-1,full=g.members.length>=g.seats,p=per(g),f=fee(p),cyc=g.cycle==="Yearly"?"year":"month";
+function head(){return '<div class="dh"><button class="x" data-close aria-label="Close">'+X+'</button><div class="av" style="background:'+c+'">'+esc(g.service[0].toUpperCase())+'</div><div class="ht"><b>'+esc(g.service)+'</b><small>Hosted by '+esc(g.host)+'</small></div></div>'}
+function main(){return '<h2 class="big">'+esc(g.plan)+'</h2><div class="sb">Split '+g.seats+' ways. Everyone gets their own seat.</div><div class="pr2"><b>'+inr(p)+'</b><s>per seat / '+cyc+'</s><span class="off">Total '+inr(g.total)+'</span></div>'+seatsHtml(g)+'<p class="hint" style="margin:8px 0 16px">'+g.members.length+' of '+g.seats+' seats filled</p>'+
+'<div class="note" style="margin-bottom:8px">No passwords are shared. Each member is added through the service\'s official invite or seat feature, using their own email.</div>'+
+'<details class="dt" open><summary>How it works</summary><ul><li>Reserve a seat and pay your share.</li><li>Your payment is held until all seats are filled.</li><li>The host sends an official invite to your own email.</li><li>Yearly plans: payment is released to the host month by month while your seat stays active.</li><li>If the host cancels, we refund the unused months or try to move you to another group (a service guarantee, not insurance).</li><li>You sign in with your own account. If the group is not full in 7 days, you are refunded.</li></ul></details>'+
+'<details class="dt" open><summary>Plan details</summary><ul><li>Billed '+(g.cycle==="Yearly"?"yearly":"monthly")+', total '+inr(g.total)+'</li><li><a href="'+esc(g.link)+'" target="_blank" rel="noopener noreferrer">Official plan page</a></li>'+(g.det||[]).map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></details>'+
+'<p class="hint" style="margin-top:14px">Provider terms can change. <a href="mailto:'+CFG.email+'?subject='+encodeURIComponent("Report group "+g.id)+'">Report this group</a></p>'}
+d.innerHTML=head()+'<div class="scroll" id="iS">'+main()+'</div><div class="cta" id="iC"></div>';
+function swap(h,fh){var s=$("iS");s.innerHTML=h;s.className="scroll swap";s.scrollTop=0;$("iC").innerHTML=fh;setTimeout(function(){s.className="scroll"},400)}
+function cta(){var b=$("iC");
+if(mine){b.innerHTML='<button class="btn o full" id="gdel">Remove group</button>';$("gdel").onclick=function(){S.groups=S.groups.filter(function(x){return x.id!==g.id});save();renderG();closeD(d);toast("Group removed")}}
+else if(joined){b.innerHTML='<button class="btn full" disabled>You are in this group</button>'}
+else if(full){b.innerHTML='<button class="btn full" disabled>Group is full</button>'}
+else{b.innerHTML='<button class="btn full" id="gjoin">Join for '+inr(p+f)+'</button>';$("gjoin").onclick=checkout}}
+function checkout(){swap('<h2 class="big" style="font-size:28px;margin-top:8px">Reserve your seat</h2><div class="sum"><div><span>Seat share</span><span>'+inr(p)+'</span></div><div><span>Service fee (5%)</span><span>'+inr(f)+'</span></div><div class="t"><span>Total</span><span>'+inr(p+f)+'</span></div></div><label for="gEm">Your email for the official invite</label><input id="gEm" type="email" placeholder="you@example.com" autocomplete="email"><p class="hint">The host adds this email to the plan. You sign in with your own account.</p><label class="chk"><input type="checkbox" id="gOk"><span>I accept the <a href="#" data-legal="groups">Group Plan Terms</a> and will follow the provider\'s terms of use. I understand no password will be shared. Payments are simulated in this beta.</span></label><div class="err" id="gErr2" role="alert"></div>',
+'<button class="btn o" id="gbk" style="height:56px">Back</button><button class="btn g full" id="gpay">Pay '+inr(p+f)+'</button>');
+$("gbk").onclick=function(){swap(main(),"");cta()};
+$("gpay").onclick=function(){var b=this,em=$("gEm").value.trim();
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){$("gErr2").textContent="Enter a valid email address.";return}
+if(!$("gOk").checked){$("gErr2").textContent="Accept the terms to continue.";return}
+b.disabled=true;b.innerHTML='<span class="spin"></span>Processing';
+setTimeout(function(){g.members.push("You");save();renderG();
+swap('<div class="ok"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="25"/><path d="M29 41l8 8 15-17"/></svg><h4>Seat reserved</h4><p class="hint" style="max-width:36ch;margin:6px auto 0">The host will send an official invite to '+esc(em)+' once the group is full. Sign in with your own account. If the group is not full in 7 days, you are refunded.</p></div>','<button class="btn full" data-close>Done</button>')},1500)}}
+cta();openD(d)}
+function gper(){var t=+$("gTot").value||0,n=+$("gSeats").value||1;$("gPer").textContent=inr(Math.ceil(t/n))}
+function gsubmit(e){e.preventDefault();var E=$("gErr"),sv=$("gSvc").value.trim(),pl=$("gPlan").value.trim(),lk=$("gLink").value.trim(),tt=+$("gTot").value,sn=+$("gSeats").value;
+if(!sv)return E.textContent="Enter the service name.";
+if(HOUSE.test(sv+" "+$("gPlan").value))return E.textContent="This provider restricts family or shared plans to one household, so we cannot list seats for it. Use an official team or business plan that allows outside members.";
+if(!pl)return E.textContent="Enter the plan name.";
+if(!/^https:\/\/\S+\.\S+/i.test(lk))return E.textContent="Enter the official plan page link, starting with https://.";
+if(!tt||tt<1)return E.textContent="Enter the total plan price.";
+if(!$("gName").value.trim()||!/^[A-Z]{5}[0-9]{4}[A-Z]$/.test($("gPan").value.trim().toUpperCase()))return E.textContent="Enter your legal name and a valid PAN, like ABCDE1234F.";
+if(!$("gState").value.trim())return E.textContent="Enter your state.";
+if(!/^[\w.\-]{2,}@[\w]{2,}$/.test($("gUpi").value.trim()))return E.textContent="Enter a valid UPI ID, like name@bank.";
+if(!$("gOk1").checked||!$("gOk2").checked||!$("gOk3").checked||!$("gOk4").checked)return E.textContent="Tick all four confirmations to start the group.";
+E.textContent="";
+S.groups.unshift({id:"g"+Date.now(),service:sv,plan:pl,link:lk,total:tt,seats:sn,cycle:$("gCyc").value,host:"You",hname:$("gName").value.trim(),hstate:$("gState").value.trim(),members:["You"],det:$("gDet").value.split(/\n+/).map(function(x){return x.trim()}).filter(Boolean),t:Date.now()});
+save();first=true;renderG();first=false;$("groupF").reset();gper();closeD($("groupD"));toast("Group created. Members join by official invite, no passwords.");$("groups").scrollIntoView({behavior:"smooth"})}
+$("newGroup").onclick=function(){openD($("groupD"))};$("groupF").addEventListener("submit",gsubmit);$("gTot").addEventListener("input",gper);$("gSeats").addEventListener("change",gper);
+function net(){$("sNet").textContent=inr(Math.floor((+$("sPrice").value||0)*0.95))}
+function thumbs(){$("thumbs").innerHTML=sImgs.map(function(s,k){return '<button type="button" data-rm="'+k+'" aria-label="Remove image" style="background-image:url('+s+')"></button>'}).join("")}
+function addFiles(fs){[].slice.call(fs).forEach(function(f){if(sImgs.length>=5||!/^image\//.test(f.type))return;var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var s=Math.min(1,900/Math.max(im.width,im.height)),cv=document.createElement("canvas");cv.width=im.width*s;cv.height=im.height*s;cv.getContext("2d").drawImage(im,0,0,cv.width,cv.height);sImgs.push(cv.toDataURL("image/jpeg",.75));thumbs()};im.src=r.result};r.readAsDataURL(f)})}
+function sell(e){e.preventDefault();var E=$("sErr"),b=$("sBrand").value.trim(),t=$("sTitle").value.trim(),f=+$("sFace").value,p=+$("sPrice").value,c=$("sCode").value.trim(),x=$("sExp").value,u=$("sUpi").value.trim(),l=$("sLink").value.trim();
+if(!b)return E.textContent="Enter the brand or merchant name.";
+if(!t)return E.textContent="Enter an offer title, like Flat 25% Off.";
+if(!f||f<10)return E.textContent="Enter the face value (at least ₹10).";
+if(!p||p<1)return E.textContent="Enter the price you want to sell at.";
+if(p>f)return E.textContent="Price cannot be higher than the face value.";
+if(p>CAP)return E.textContent="Beta limit: listings are capped at ₹5,000.";
+if(HID.indexOf($("sCat").value)>-1)return E.textContent="This category is not open in the beta.";
+if(BLOCK.test(b+" "+t+" "+$("sSub").value+" "+$("sDet").value))return E.textContent="This listing mentions something we do not allow (ad credits, account logins or shared accounts). Please remove it.";
+if(!$("sName").value.trim()||!/^[A-Z]{5}[0-9]{4}[A-Z]$/.test($("sPan").value.trim().toUpperCase()))return E.textContent="Enter your legal name and a valid PAN, like ABCDE1234F.";
+if(!$("sState").value.trim())return E.textContent="Enter your state.";
+if(c.length<4)return E.textContent="Enter the coupon or gift code.";
+if(!x||new Date(x)<new Date())return E.textContent="Pick an expiry date in the future.";
+if(l&&!/^https?:\/\//i.test(l))return E.textContent="Redeem link must start with http:// or https://.";
+if(!/^[\w.\-]{2,}@[\w]{2,}$/.test(u))return E.textContent="Enter a valid UPI ID, like name@bank.";
+if(!$("sOk").checked||!$("sOk2").checked||!$("sOk3").checked||!$("sOk4").checked)return E.textContent="Tick all four confirmations to list your item.";
+E.textContent="";
+var urls=$("sUrls").value.split(/\n+/).map(function(s){return s.trim()}).filter(function(s){return /^https?:\/\//i.test(s)});
+S.items.unshift({id:"u"+Date.now(),brand:b,title:t,sub:$("sSub").value.trim(),cat:$("sCat").value,face:f,price:p,exp:x,code:c,seller:"You",sname:$("sName").value.trim(),sstate:$("sState").value.trim(),t:Date.now(),link:l,imgs:sImgs.concat(urls).slice(0,5),det:$("sDet").value.split(/\n+/).map(function(s){return s.trim()}).filter(Boolean)});
+save();first=true;render();$("sellF").reset();sImgs=[];thumbs();net();catNote();closeD($("sellD"));toast("Submitted. Listing goes live after KYC verification (simulated in beta).");$("mineS").scrollIntoView({behavior:"smooth"})}
+
+var LG={
+terms:["Terms of Service","<p>Last updated: 21 November 2026. These Terms govern your use of Vouchly (the Platform), operated by {name}, {addr}. By using the Platform you accept them.</p><h4>1. Our role</h4><p>Vouchly is an online marketplace and an intermediary under the Information Technology Act, 2000. Sellers list items and buyers purchase them. The sale contract is between the buyer and the seller. We do not own, issue, inspect or guarantee any listed item.</p><h4>2. Eligibility and accounts</h4><p>You must be 18 or older, able to enter a binding contract in India, and give accurate information. We may ask for identity or payout verification, and may refuse or end access at our discretion.</p><h4>3. What may be sold</h4><p>Only lawful digital items that you own and may transfer: gift cards, single-use coupons, transferable subscription vouchers, and seats in group plans under the Group Plan Terms. Banned items are listed in the Prohibited Items policy.</p><h4>4. Seller promises</h4><ul><li>You own the item and the code is valid, unused and exactly as described.</li><li>The issuer's or program's terms allow you to transfer or sell it.</li><li>You will not list the same code twice or sell it elsewhere at the same time.</li><li>You will not take buyers or payments off the Platform.</li></ul><h4>5. Buyers</h4><p>Items are digital. The code is shown only after payment. Purchases are non-returnable except where the code is invalid or already used, as set out in the Refunds and Disputes policy. Check the offer terms and expiry before you buy.</p><h4>6. Fees, payments and payouts</h4><p>Sellers pay a 5% fee on completed sales, plus GST where applicable. In the full version, payments will be processed by an RBI-authorised payment aggregator, and payouts released after the dispute window. In this beta, payments are simulated and no money moves.</p><h4>7. Taxes</h4><p>Sellers are responsible for their own income tax, GST and other taxes. We may deduct or collect tax at source where the law requires it.</p><h4>8. Content and intellectual property</h4><p>You may upload only images and text you have the right to use. You give us a non-exclusive licence to display them on the Platform. See the Copyright and IP page for takedown requests.</p><h4>9. Disclaimers</h4><p>The Platform is provided as is. We do not guarantee that any code is valid, has balance, or will be accepted by the issuer. Issuers may change or cancel offers at any time.</p><h4>10. Limitation of liability</h4><p>To the extent permitted by law, we are not liable for the acts of sellers, buyers or issuers, or for indirect or consequential loss. Our total liability for any transaction is limited to the fees we received for it. Your statutory consumer rights are not affected.</p><h4>11. Indemnity</h4><p>You will cover losses we suffer because you broke these Terms, the law, or a third party's rights.</p><h4>12. Suspension and legal cooperation</h4><p>We may remove listings, hold payouts, suspend accounts and share information with authorities where we suspect fraud or are legally required to.</p><h4>13. Complaints and disputes</h4><p>Contact our Grievance Officer first. If a dispute is not settled, it goes to a sole arbitrator under the Arbitration and Conciliation Act, 1996, seated in {city}, in English. Indian law applies and the courts at {city} have exclusive jurisdiction, subject to any consumer right to approach a consumer forum.</p><h4>14. Changes</h4><p>We may update these Terms. Continued use after a change means you accept it.</p><h4>15. Contact</h4><p><a href='mailto:{email}'>{email}</a></p>"],
+privacy:["Privacy Policy","<p>Last updated: 21 November 2026. {name} is the data fiduciary for Vouchly under the Digital Personal Data Protection Act, 2023.</p><h4>What we collect</h4><ul><li>Listing details: brand, offer, price, code, images, expiry.</li><li>Payment details such as your UPI ID, used only to take or send payments.</li><li>Contact details and, in the full version, identity details needed for verification.</li><li>Basic device and log data for security.</li></ul><h4>Why we use it</h4><p>To run listings and payments, prevent fraud, handle disputes, meet legal duties, and improve the service. We use it only with your consent or where the law allows.</p><h4>Who sees it</h4><p>Codes are shown only to the buyer who has paid. We share data with payment partners, hosting providers and authorities where needed. We do not sell personal data.</p><h4>Beta storage</h4><p>In this beta, your data is saved only in your browser and is not sent to a server. Clear your browser data to delete it.</p><h4>Retention and security</h4><p>We keep data only as long as needed for the purpose or the law. Codes will be encrypted at rest in the full version.</p><h4>Your rights</h4><p>You can ask to access, correct or erase your data, withdraw consent, and nominate someone to act for you. Write to the Grievance Officer at <a href='mailto:{oemail}'>{oemail}</a>. If unresolved, you may approach the Data Protection Board of India.</p><h4>Children</h4><p>The Platform is not for anyone under 18.</p>"],
+copyright:["Copyright & IP","<p>&copy; 2026 Vouchly. All rights reserved.</p><p>The Vouchly name, logo, design, text and source code are protected by copyright and other laws. Do not copy, modify or redistribute them without written permission.</p><h4>Third-party content</h4><p>Brand names and logos belong to their owners and appear only to describe user-listed offers, with no implied affiliation. Sample photos are from Unsplash and belong to their photographers under the Unsplash License. Sellers must upload only images they may use.</p><h4>Report infringement</h4><p>Send a notice to <a href='mailto:{email}'>{email}</a> with: your name and contact details, what is infringed and proof you own it, the link to the listing, a statement that you act in good faith, and your signature. We will review it promptly and may remove the listing.</p><h4>Counter notice and repeat infringers</h4><p>If your listing was removed by mistake, reply with your reasons and proof of rights. Accounts with repeated infringement are closed.</p>"],
+disclaimer:["Disclaimer","<p>Vouchly Beta is a concept test. It is not a bank, payment provider or issuer of prepaid instruments.</p><ul><li>Sample listings are demo data and their codes do not work.</li><li>We do not verify validity or balances in this beta.</li><li>Offers may carry issuer restrictions, expiry and one-time use rules. Check them before buying or selling.</li><li>Nothing here is legal, tax or financial advice.</li></ul>"],
+prohibited:["Prohibited Items","<p>You must not list or buy:</p><ul><li>Stolen, hacked, fraudulent, phished or leaked codes</li><li>Codes already redeemed, expired, cancelled or with no balance</li><li>Codes you do not own or may not legally transfer</li><li>Offers whose terms forbid resale</li><li>Account logins, passwords, OTPs, shared or hacked accounts</li><li>Cracked, pirated, volume-licence or copied software and content</li><li>Personal data, KYC documents, government IDs, SIM cards or bank accounts</li><li>Lottery, betting or gambling credits, and cryptocurrency</li><li>Alcohol, tobacco, drugs, weapons, adult content or anything illegal in India</li><li>Duplicate listings of the same code</li></ul><p>We may remove listings, withhold payouts, ban accounts and report fraud to the authorities.</p>"],
+refund:["Refunds & Disputes","<p>Buyers can report a problem within 24 hours of purchase. Include a screenshot of the issuer's error message.</p><h4>Eligible</h4><ul><li>The code is invalid or already used.</li><li>The item is materially different from the listing.</li></ul><h4>Not eligible</h4><ul><li>Change of mind, or a code you have already redeemed.</li><li>Issuer cancelling or changing an offer after redemption.</li></ul><h4>Process</h4><p>In the full version, the seller's payout is held for 48 hours. We review the evidence from both sides, then refund the buyer or release the payout, usually within 7 days. Sellers of invalid codes may be banned.</p><p>Beta note: no real payments are processed, so no refunds apply.</p>"],
+groups:["Group Plan Terms","<p>Last updated: 21 November 2026. These terms apply to Group Plans on Vouchly, together with the Terms of Service.</p><h4>1. What a Group Plan is</h4><p>A Group Plan lets a Host and other members split the cost of an official multi-user plan (such as a team, business or multi-seat plan) offered by a third-party service. Vouchly only coordinates the group and the payments. We are not the provider or reseller of the service, we do not own or hold any member account, and the provider is not a party to these terms.</p><h4>2. No shared passwords</h4><p>Hosts and members must never share passwords, one-time passwords, recovery codes or payment details. Every member is added through the provider's official invite or seat feature, with their own email, and signs in with their own account. Groups that rely on a single shared login are banned.</p><h4>3. Plans that qualify</h4><p>The Host must confirm that the provider's current terms allow the plan to be shared with the members, including people outside the Host's household or organisation, and must give the official plan link. Plans restricted to one household or one organisation may not be listed unless the provider permits it. We may remove a group at the provider's request or if we find a breach of the provider's terms.</p><h4>4. Price and payments</h4><p>The seat price is the total plan price divided by the number of seats, rounded up, plus a 5% service fee and GST where applicable. Member payments are held until every seat is filled and the Host sends the invites. If the group is not full within 7 days, members are refunded in full. In this beta, payments are simulated.</p><h4>5. Host duties</h4><ul><li>You are the paying account holder and are 18 or older, and you keep the plan active for the whole paid period.</li><li>Send each member an official invite within 24 hours of the group filling.</li><li>Use member emails only to send invites, and delete them when the member leaves.</li><li>Tell members at once if the provider changes the price, rules or sharing features.</li></ul><h4>6. Member duties</h4><ul><li>Use only your own seat and follow the provider's terms of use.</li><li>Do not resell or share your seat.</li><li>Give a correct email so the Host can invite you.</li></ul><h4>7. Leaving, changes and refunds</h4><p>Members can leave before the next billing cycle by giving 7 days notice. If the provider cancels the plan, removes sharing, or the Host fails to invite you, you get a pro-rata refund under the Refunds and Disputes policy. Hosts who miss their duties may be banned and charged the refund.</p><h4>8. Provider risk</h4><p>Providers can change prices, features and sharing rules at any time. Vouchly does not guarantee access to any service.</p><h4>9. Not an investment</h4><p>Payments are only for your share of a plan's cost. Vouchly does not pool funds for investment or profit, and is not a partner or agent of any member.</p><h4>10. Complaints</h4><p>Contact the Grievance Officer. Disputes follow the Terms of Service.</p>"],
+seller:["Seller Agreement","<p>This agreement applies to everyone who lists on Vouchly, together with the Terms.</p><h4>Listing rules</h4><ul><li>Describe the item honestly: value, expiry, conditions and limits.</li><li>Enter a valid code. Do not edit the code after listing.</li><li>Do not list items that the issuer forbids from being resold.</li><li>Remove the listing if the code is used or cancelled.</li></ul><h4>Fees and payouts</h4><p>A 5% fee applies to completed sales, plus GST where applicable. Payouts go to your UPI ID after the dispute window. We may hold or reverse payouts for confirmed invalid codes or suspected fraud.</p><h4>Taxes</h4><p>You are responsible for your own taxes. We may deduct tax at source where required, and may ask for PAN or GST details.</p><h4>Breach</h4><p>Misdescribed or invalid listings can lead to removal, refunds charged to you, suspension, and reporting to authorities.</p>"],
+cookies:["Cookie Policy","<p>This beta uses your browser's local storage to keep your listings and your cookie choice. We use no tracking, analytics or advertising cookies. If we add any later, we will ask for your consent first. You can clear this data at any time from your browser settings.</p>"],
+about:["About Vouchly","<p>Vouchly is a beta marketplace where people can sell unused gift cards, coupons and subscription vouchers at their own price. The code stays locked until the buyer has paid.</p><p>We are testing whether people want this idea. Operated by {name}, {addr}.</p>"],
+contact:["Contact us","<p>Email: <a href='mailto:{email}'>{email}</a></p><p>Address: {addr}</p><p>For complaints, see the Grievance Officer page.</p>"],
+help:["Help centre","<h4>How to buy</h4><p>Open a listing, read the details and expiry, press Buy, and pay. The code unlocks after payment.</p><h4>How to sell</h4><p>Press Sell a voucher, add the details, set your price and confirm. Your code stays hidden until it sells.</p><h4>Code not working?</h4><p>Report it within 24 hours. See Refunds and Disputes.</p><h4>More</h4><p>Contact <a href='mailto:{email}'>{email}</a>.</p>"],
+trust:["Trust & safety","<ul><li>Never share OTPs, passwords or bank PINs. Vouchly will never ask for them.</li><li>Do not pay or chat outside the Platform.</li><li>Check the expiry and conditions before buying.</li><li>Report suspicious listings with the report link or to the Grievance Officer.</li><li>We cooperate with the authorities on fraud and money-laundering checks.</li></ul>"],
+grievance:["Grievance Officer","<p>In line with the Information Technology (Intermediary Guidelines) Rules, 2021 and the Consumer Protection (E-Commerce) Rules, 2020:</p><p><b>Name:</b> {officer}<br><b>Email:</b> <a href='mailto:{oemail}'>{oemail}</a><br><b>Address:</b> {addr}</p><p>We acknowledge complaints within 24 hours and aim to resolve them within 15 days.</p>"]};
+function legal(k){var l=LG[k];if(!l)return;$("lT").textContent=l[0];$("lB").innerHTML=l[1].replace(/\{(\w+)\}/g,function(m,x){return CFG[x]?esc(CFG[x]):m});$("lB").scrollTop=0;openD($("legalD"))}
+
+document.addEventListener("pointerdown",function(e){var t=e.target.closest(".btn,.chip,.card,.x");if(!t)return;var r=t.getBoundingClientRect(),s=document.createElement("span"),m=Math.max(r.width,r.height)*2;s.className="rp";s.style.cssText="width:"+m+"px;height:"+m+"px;left:"+(e.clientX-r.left-m/2)+"px;top:"+(e.clientY-r.top-m/2)+"px";t.appendChild(s);setTimeout(function(){s.remove()},600)});
+document.addEventListener("click",function(e){var t=e.target,y;
+if(y=t.closest("[data-close]")){closeD(y.closest("dialog"));return}
+if(y=t.closest("[data-legal]")){e.preventDefault();legal(y.dataset.legal);return}
+if(y=t.closest("[data-gopen]")){openGroup(y.dataset.gopen);return}
+if(y=t.closest("[data-scroll]")){e.preventDefault();var el=$(y.dataset.scroll);if(el)el.scrollIntoView({behavior:"smooth"});return}
+if(y=t.closest("[data-fcat]")){e.preventDefault();cat=y.dataset.fcat;chips();first=false;render();$("market").scrollIntoView({behavior:"smooth"});return}
+if(y=t.closest("[data-cat]")){cat=y.dataset.cat;chips();render();return}
+if(y=t.closest("[data-open]")){openItem(y.dataset.open);return}
+if(y=t.closest("[data-rm]")){sImgs.splice(+y.dataset.rm,1);thumbs();return}
+if(t.id==="emptySell"){e.preventDefault();openD($("sellD"))}
+if(t.tagName==="DIALOG")closeD(t)});
+document.addEventListener("keydown",function(e){if((e.key==="Enter"||e.key===" ")&&e.target.matches&&e.target.matches(".card")){e.preventDefault();(e.target.dataset.gopen?openGroup(e.target.dataset.gopen):openItem(e.target.dataset.open))}});
+document.querySelectorAll("dialog").forEach(function(d){d.addEventListener("cancel",function(e){e.preventDefault();closeD(d)})});
+function catNote(){var n=NOTES[$("sCat").value],e=$("catNote");e.hidden=!n;e.textContent=n||""}$("sCat").addEventListener("change",catNote);catNote();
+$("sellTop").onclick=function(){openD($("sellD"))};
+$("sellF").addEventListener("submit",sell);$("sPrice").addEventListener("input",net);$("sFile").addEventListener("change",function(){addFiles(this.files);this.value=""});
+$("sf").addEventListener("submit",function(e){e.preventDefault();render();$("market").scrollIntoView({behavior:"smooth"})});
+$("q").addEventListener("input",function(){first=false;render()});$("sort").addEventListener("change",render);
+addEventListener("scroll",function(){$("hd").classList.toggle("stuck",scrollY>8)},{passive:true});
+$("yr").textContent=new Date().getFullYear();setTimeout(function(){var e=$("splash");if(e)e.remove()},2600);
+$("fOp").textContent="Operated by "+CFG.name+", "+CFG.addr+".";try{if(!localStorage.getItem("vouchly_ck"))$("ck").hidden=false}catch(e){$("ck").hidden=false}$("ckOk").onclick=function(){try{localStorage.setItem("vouchly_ck","1")}catch(e){}$("ck").hidden=true};
+
+var WT=[{n:"₹500 Swiggy voucher",m:425,w:"Priya R."},{n:"₹1,000 Amazon gift card",m:900,w:"Vikram S."}];
+function renderW(){var a=(S.wtb||[]).concat(WT);$("wgrid").innerHTML=a.map(function(w){return '<article class="card in"><div class="cb"><h3>'+esc(w.n)+'</h3><p>Wanted by '+esc(w.w)+'</p><div class="pr"><b>Up to '+inr(w.m)+'</b></div></div></article>'}).join("")}
+$("wtbBtn").onclick=function(){openD($("wtbD"))};
+$("wtbF").addEventListener("submit",function(e){e.preventDefault();var E=$("wErr"),n=$("wNeed").value.trim(),m=+$("wMax").value;
+if(!n)return E.textContent="Tell us what you need.";if(BLOCK.test(n))return E.textContent="We do not allow requests for that item.";
+if(!m||m<1)return E.textContent="Enter your maximum price.";if(!/^\S+@\S+\.\S+$/.test($("wMail").value))return E.textContent="Enter a valid email.";
+if(!$("wOk").checked)return E.textContent="Please give consent to receive alerts.";E.textContent="";
+(S.wtb=S.wtb||[]).unshift({n:n,m:m,w:"You"});save();renderW();$("wtbF").reset();closeD($("wtbD"));toast("Request posted. Sellers will be notified.")});
+$("pBtn").onclick=function(){var t=$("sPaste").value,m;if(!t.trim())return toast("Paste the offer text first");
+if(m=t.match(/(?:₹|rs\.?\s*)\s*([\d,]+)/i)){$("sFace").value=m[1].replace(/,/g,"")}
+if(m=t.match(/(\d{1,2})%/)){$("sTitle").value="Flat "+m[1]+"% off"}
+if(m=t.match(/(?:from|at|on)\s+([A-Z][\w&]+)/)){$("sBrand").value=m[1]}
+if(m=t.match(/(?:code|coupon)[:\s]+([A-Z0-9\-]{5,})/i)){$("sCode").value=m[1]}
+if(m=t.match(/(?:expires?|valid till|until)[^\d]*(\d{1,2})[\/\-\s](\w{2,3})[\/\-\s,]*(\d{2,4})/i)){var d=new Date(m[1]+" "+m[2]+" "+m[3]);if(!isNaN(d))$("sExp").value=d.toISOString().slice(0,10)}
+$("sDet").value=t.split(/\n+/).map(function(x){return x.trim()}).filter(Boolean).slice(0,5).join("\n");toast("Filled what we could. Please check every field.")};
+LG.terms[1]+='<h4>Payments and escrow</h4><p>Payments are collected and settled by an RBI-authorised payment aggregator. Vouchly never holds buyer funds in its own account. Settlement to sellers follows the dispute window in the Refund policy.</p><h4>Safe harbour and grievances</h4><p>We act as an intermediary under Section 79 of the IT Act, 2000 and follow the IT (Intermediary Guidelines) Rules, 2021 and the Consumer Protection (E-Commerce) Rules, 2020. We remove unlawful content on lawful notice and acknowledge complaints within 24 hours.</p>';
+LG.seller[1]+='<h4>KYC, tax and receipts</h4><p>Sellers must provide legal name, PAN, state and a verified bank or UPI account. We may deduct TDS under Section 393(1) of the Income-tax Act, 2025 (0.1% of gross sales, with an exemption for individuals up to ₹5 lakh a year who have given PAN or Aadhaar) and collect GST TCS where applicable. Whether you must register for GST depends on your facts; take professional advice. Listings are capped at ₹5,000 in the beta. First-time sellers have a 48-hour payout hold, reduced after 10 completed sales with no disputes. Buyers receive a receipt showing your legal name and state.</p>';
+LG.refund[1]+='<h4>Proof for disputes</h4><p>Record your screen from tapping Unlock until you enter the code in the merchant app. Report a problem within the dispute window. Without this recording we may be unable to refund. Recordings are used only to resolve the dispute and deleted afterwards. Repeated false claims lead to suspension.</p>';
+LG.prohibited[1]+='<h4>Also banned</h4><p>Google Ads or other advertising credits, account logins or shared accounts, family-plan seats for providers that restrict them to one household, cracked or volume-licence keys, codes bought with stolen cards, and anything breaching the issuer\'s terms. Other categories are closed during the beta.</p>';
+LG.privacy[1]+='<h4>DPDP Act, 2023</h4><p>We process KYC and payout data only to verify sellers, complete payments, prevent fraud and meet legal duties. We give a notice before collecting consent, collect only what is needed, keep data secure, and report breaches to the Data Protection Board and affected users as the law requires. You may access, correct or erase your data and nominate someone to act for you by writing to the Grievance Officer. Core DPDP duties begin 13 May 2027; we follow them now. Logs may be kept for the periods CERT-In directions require.</p>';
+LG.compliance=["Compliance","<p>Vouchly aims to comply with the IT Act 2000, the IT Rules 2021, the Consumer Protection Act 2019 and E-Commerce Rules 2020 (clear pricing, no hidden charges, no fake urgency or dark patterns), DPDP Act 2023, CERT-In incident reporting, the Prevention of Money Laundering Act (through KYC, caps and suspicious-activity reporting where required), RBI payment rules, GST and income-tax rules, and the policies of Google and other brands. Brand names are used only to identify user-listed offers. Brand owners and issuers can report listings that breach their terms or trademarks to the Grievance Officer, and we will act on valid notices. Gift cards and vouchers are issued by third parties under RBI rules; Vouchly does not issue, load or redeem them. Many issuers restrict transfer for value, so listings are the seller\'s responsibility. Do not rely on this summary as legal advice.</p>"];
+
+var P={},TH="system",MODES=[["light","Light"],["dark","Dark"],["system","System"]];
+var IC={user:"M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z",bank:"M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z",tag:"M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z",bag:"M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm0 10c-2.76 0-5-2.24-5-5h2c0 1.66 1.34 3 3 3s3-1.34 3-3h2c0 2.76-2.24 5-5 5z",cash:"M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z",bell:"M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z",cog:"M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z",help:"M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z",shield:"M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"};
+function ico(k){return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="'+IC[k]+'"/></svg>'}
+function loadP(){try{P=JSON.parse(localStorage.getItem("vouchly_profile"))||{}}catch(e){P={}}P.accts=P.accts||[];P.notif=P.notif||{orders:true,wtb:true,promo:false}}
+function saveP(){try{localStorage.setItem("vouchly_profile",JSON.stringify(P))}catch(e){toast("Could not save: browser storage is blocked.")}}
+function setTheme(m){TH=m;var r=document.documentElement;if(m==="system")r.removeAttribute("data-theme");else r.setAttribute("data-theme",m);try{if(m==="system")localStorage.removeItem("vouchly_theme");else localStorage.setItem("vouchly_theme",m)}catch(e){}
+var dk=m==="dark"||(m==="system"&&matchMedia("(prefers-color-scheme:dark)").matches),mt=document.querySelector('meta[name=theme-color]');if(mt)mt.content=dk?"#2b2415":"#fef7e0";
+$("thBtn").innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="'+(dk?"M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2v-2H2v2zm18 0h2v-2h-2v2zM11 2v2h2V2h-2zm0 18v2h2v-2h-2zM5.99 4.58 4.58 5.99l1.41 1.41 1.41-1.41-1.41-1.41zm12.37 12.37-1.41 1.41 1.41 1.41 1.41-1.41-1.41-1.41zm1.41-10.96-1.41-1.41-1.41 1.41 1.41 1.41 1.41-1.41zM7.4 18.36l-1.41-1.41-1.41 1.41 1.41 1.41 1.41-1.41z":"M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z")+'"/></svg>';
+$("thBtn").setAttribute("aria-label",dk?"Switch to light theme":"Switch to dark theme");document.querySelectorAll(".seg button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.th===m)})}
+function kyc(){return P.pan&&P.name&&P.accts.length?'<span class="bdg ok">Details added</span>':'<span class="bdg">KYC pending</span>'}
+function drawer(){var n=P.name||"Guest",ini=(P.name||"V")[0].toUpperCase();$("avB").textContent=ini;
+var it=function(k,i,l,e){return '<button class="mi" data-acct="'+k+'">'+ico(i)+'<span>'+l+'</span>'+(e?'<em>'+e+'</em>':'')+'</button>'};
+var mine=S.items.filter(function(x){return x.seller==="You"}).length;
+$("drawer").innerHTML='<div class="dr-h"><div class="avb">'+esc(ini)+'</div><div style="flex:1;min-width:0"><b>'+esc(n)+'</b><small>'+esc(P.email||"Beta profile, saved on this device")+'</small><div style="margin-top:4px">'+kyc()+'</div></div><button class="ib" id="drX" aria-label="Close menu"><svg viewBox="0 0 24 24"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button></div><div class="dr-b">'+
+'<div class="dr-s">Account</div>'+it("profile","user","Profile and KYC")+it("pay","bank","Bank and UPI accounts",P.accts.length||"")+it("listings","tag","My listings",mine||"")+it("orders","bag","My purchases",(S.buys||[]).length||"")+it("payouts","cash","Payouts and tax")+
+'<div class="dr-s">Preferences</div>'+it("notif","bell","Notifications")+it("settings","cog","Privacy and data")+
+'<div class="dr-s">Theme</div><div class="seg" role="group" aria-label="Theme">'+MODES.map(function(m){return '<button data-th="'+m[0]+'" aria-pressed="'+(m[0]===TH)+'">'+m[1]+'</button>'}).join("")+'</div>'+
+'<div class="dr-s">Support</div><button class="mi" data-legal="help">'+ico("help")+'<span>Help centre</span></button><button class="mi" data-legal="grievance">'+ico("shield")+'<span>Grievance officer</span></button><button class="mi" data-legal="terms">'+ico("shield")+'<span>Terms and policies</span></button></div>'}
+function menu(on){var d=$("drawer");if(on)drawer();d.classList.toggle("on",on);$("scrim").classList.toggle("on",on);d.setAttribute("aria-hidden",!on);$("menuBtn").setAttribute("aria-expanded",on);document.body.style.overflow=on?"hidden":"";if(on)setTimeout(function(){$("drX").focus()},60)}
+function mask4(v){return "••••"+String(v).slice(-4)}
+function acct(v){var T={profile:"Profile and KYC",pay:"Bank and UPI accounts",listings:"My listings",orders:"My purchases",payouts:"Payouts and tax",notif:"Notifications",settings:"Privacy and data"},h="";$("aT").textContent=T[v];
+if(v==="profile")h='<div class="note" style="margin-top:4px">Beta: details are saved only in this browser. The live site will sign you in with a mobile OTP and verify PAN with the issuing authority.</div><form id="pF" novalidate><label for="pN">Legal name (as on PAN)</label><input id="pN" value="'+esc(P.name||"")+'" autocomplete="name"><label for="pE">Email</label><input id="pE" type="email" value="'+esc(P.email||"")+'" autocomplete="email"><div class="row"><div><label for="pM">Mobile</label><input id="pM" inputmode="numeric" maxlength="10" value="'+esc(P.mobile||"")+'" autocomplete="tel-national"></div><div><label for="pS">State</label><input id="pS" value="'+esc(P.state||"")+'" autocomplete="address-level1"></div></div><label for="pP">PAN</label><input id="pP" maxlength="10" value="'+esc(P.pan||"")+'" style="text-transform:uppercase" autocomplete="off"><p class="hint">Used for KYC, TDS rules and your sale receipt. Never shown to buyers.</p><div class="err" id="pErr" role="alert"></div><button class="btn full" type="submit" style="margin-top:8px">Save profile</button></form>';
+if(v==="pay"){h='<div class="note" style="margin-top:4px">Payouts go only to an account in your own name. Each new account is verified with a small penny-drop deposit (simulated in beta). We store only the last 4 digits of an account number.</div>'+(P.accts.length?P.accts.map(function(a,k){return '<div class="li"><div><b>'+esc(a.type==="UPI"?a.id:a.holder+" · "+mask4(a.no))+'</b><small>'+(a.type==="UPI"?"UPI":"Bank · "+esc(a.ifsc))+' · '+(a.def?"Default payout":"Verification pending")+'</small></div>'+(a.def?'':'<button data-def="'+k+'">Make default</button>')+'<button data-del="'+k+'">Remove</button></div>'}).join(""):'<p class="hint" style="margin-top:12px">No payout account yet.</p>')+
+'<form id="aF" novalidate><label for="aTy">Add account</label><select id="aTy" class="sel"><option>UPI</option><option>Bank</option></select><div id="aUpi"><label for="aU">UPI ID</label><input id="aU" placeholder="name@bank" autocomplete="off"></div><div id="aBk" hidden><label for="aH">Account holder name</label><input id="aH" autocomplete="off"><label for="aN">Account number</label><input id="aN" inputmode="numeric" maxlength="18" autocomplete="off"><label for="aI">IFSC</label><input id="aI" maxlength="11" style="text-transform:uppercase" placeholder="HDFC0001234" autocomplete="off"></div><div class="err" id="aErr" role="alert"></div><button class="btn full" type="submit">Add account</button></form>'}
+if(v==="listings"){var L=S.items.filter(function(x){return x.seller==="You"});h=L.length?L.map(function(x){return '<div class="li"><div><b>'+esc(x.brand+" · "+x.title)+'</b><small>'+inr(x.price)+' · you receive about '+inr(Math.floor(x.price*.95))+' · '+(x.sold?"Sold":"Awaiting KYC check (demo)")+'</small></div>'+(x.sold?'':'<button data-rl="'+esc(x.id)+'">Remove</button>')+'</div>'}).join(""):'<p class="hint" style="margin-top:12px">You have no listings yet.</p>';h+='<button class="btn full" id="aSell" style="margin-top:16px">Sell a voucher</button>'}
+if(v==="orders"){var B=S.buys||[];h=B.length?B.map(function(b){var end=new Date(b.t+48*36e5);return '<div class="li"><div><b>'+esc(b.brand+" · "+b.title)+'</b><small>'+inr(b.price)+' · '+new Date(b.t).toLocaleDateString("en-IN")+' · seller '+esc(b.seller)+'</small><small>Dispute window ends '+end.toLocaleString("en-IN",{day:"numeric",month:"short",hour:"numeric",minute:"2-digit"})+'. Keep your screen recording.</small></div><button data-rep="'+esc(b.id)+'">Report</button></div>'}).join(""):'<p class="hint" style="margin-top:12px">No purchases yet. Receipts will appear here with the seller\'s legal name and state.</p>'}
+if(v==="payouts")h='<div class="note" style="margin-top:4px">Payout hold: 48 hours for new sellers. After 10 completed sales with no disputes the hold drops to 15 minutes. Group hosts are paid month by month.</div><div class="sum"><div><span>Completed sales</span><b>0</b></div><div><span>Fees (5%)</span><b>₹0</b></div><div><span>TDS deducted</span><b>₹0</b></div><div class="t"><span>Paid out</span><b>₹0</b></div></div><p class="hint">Sales this financial year against ₹5,00,000 (TDS threshold for individuals with PAN on file)</p><div class="bar2"><i style="width:0%"></i></div><p class="hint">TDS at 0.1% and GST TCS apply as the law requires. A statement is issued for each payout. Ask your CA about GST registration and income tax on your sales.</p>';
+if(v==="notif")h='<p class="hint" style="margin-top:4px">Marketing messages are off unless you turn them on. Transaction and safety messages cannot be turned off.</p>'+[["orders","Order and payout updates"],["wtb","Want-to-buy matches"],["promo","Offers and news (optional)"]].map(function(r){return '<label class="tg"><span>'+r[1]+'</span><input type="checkbox" data-nt="'+r[0]+'"'+(P.notif[r[0]]?" checked":"")+'></label>'}).join("");
+if(v==="settings")h='<div class="dr-s" style="padding-left:0">Theme</div><div class="seg" role="group" aria-label="Theme">'+MODES.map(function(m){return '<button data-th="'+m[0]+'" aria-pressed="'+(m[0]===TH)+'">'+m[1]+'</button>'}).join("")+'</div><div class="dr-s" style="padding-left:0">Your data (DPDP Act)</div><p class="hint">You can download or erase what this beta stores about you. For access, correction, erasure or nominee requests on the live site, write to the Grievance Officer.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px"><button class="btn o" id="dl">Download my data</button><button class="btn o" id="er" style="color:var(--red)">Erase my data</button></div>';
+$("aB").innerHTML=h;acct.v=v;openD($("acctD"));
+if(v==="pay"){var ty=$("aTy");ty.onchange=function(){$("aUpi").hidden=ty.value!=="UPI";$("aBk").hidden=ty.value==="UPI"}}}
+function openAcct(v){menu(false);acct(v)}
+document.addEventListener("click",function(e){var t=e.target,y;
+if(t.closest("#menuBtn")){menu(!$("drawer").classList.contains("on"));return}
+if(t.closest("#scrim")||t.closest("#drX")){menu(false);return}
+if(t.closest("#thBtn")){var dk=document.documentElement.dataset.theme==="dark"||(TH==="system"&&matchMedia("(prefers-color-scheme:dark)").matches);setTheme(dk?"light":"dark");return}
+if(y=t.closest("[data-th]")){setTheme(y.dataset.th);return}
+if(y=t.closest("[data-acct]")){openAcct(y.dataset.acct);return}
+if(t.closest("#drawer [data-legal]"))menu(false);
+if(y=t.closest("[data-def]")){P.accts.forEach(function(a,k){a.def=k==y.dataset.def});saveP();acct("pay");return}
+if(y=t.closest("[data-del]")){P.accts.splice(+y.dataset.del,1);if(P.accts.length&&!P.accts.some(function(a){return a.def}))P.accts[0].def=true;saveP();acct("pay");return}
+if(y=t.closest("[data-rl]")){S.items=S.items.filter(function(x){return x.id!==y.dataset.rl});save();render();acct("listings");toast("Listing removed");return}
+if(y=t.closest("[data-rep]")){location.href="mailto:"+CFG.email+"?subject="+encodeURIComponent("Dispute for order "+y.dataset.rep);return}
+if(t.closest("#aSell")){closeD($("acctD"));setTimeout(function(){prefill();openD($("sellD"))},240);return}
+if(t.closest("#dl")){var b=new Blob([JSON.stringify({profile:P,purchases:S.buys||[],listings:S.items.filter(function(x){return x.seller==="You"})},null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="vouchly-my-data.json";a.click();return}
+if(t.closest("#er")){if(confirm("Erase your profile, accounts, purchases and listings from this browser?")){try{["vouchly_profile",KEY,"vouchly_theme"].forEach(function(k){localStorage.removeItem(k)})}catch(x){}P={accts:[],notif:{orders:true,wtb:true,promo:false}};load();setTheme("system");render();acct("settings");toast("Your data was erased.")}return}});
+document.addEventListener("change",function(e){var n=e.target.dataset&&e.target.dataset.nt;if(n){P.notif[n]=e.target.checked;saveP()}});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&$("drawer").classList.contains("on"))menu(false)});
+document.addEventListener("submit",function(e){var f=e.target.id;
+if(f==="pF"){e.preventDefault();var n=$("pN").value.trim(),em=$("pE").value.trim(),m=$("pM").value.trim(),st=$("pS").value.trim(),pn=$("pP").value.trim().toUpperCase(),E=$("pErr");
+if(n.length<2)return E.textContent="Enter your legal name.";if(em&&!/^\S+@\S+\.\S+$/.test(em))return E.textContent="Enter a valid email.";if(m&&!/^[6-9]\d{9}$/.test(m))return E.textContent="Enter a valid 10-digit mobile number.";if(pn&&!/^[A-Z]{5}[0-9]{4}[A-Z]$/.test(pn))return E.textContent="Enter a valid PAN, like ABCDE1234F.";
+P.name=n;P.email=em;P.mobile=m;P.state=st;P.pan=pn;saveP();drawer();toast("Profile saved");closeD($("acctD"))}
+if(f==="aF"){e.preventDefault();var E=$("aErr"),ty=$("aTy").value,a;
+if(ty==="UPI"){var u=$("aU").value.trim();if(!/^[\w.\-]{2,}@[\w]{2,}$/.test(u))return E.textContent="Enter a valid UPI ID, like name@bank.";a={type:"UPI",id:u}}
+else{var h=$("aH").value.trim(),no=$("aN").value.trim(),ifc=$("aI").value.trim().toUpperCase();if(h.length<2)return E.textContent="Enter the account holder name.";if(P.name&&h.toLowerCase()!==P.name.toLowerCase())return E.textContent="Account holder name must match your profile name.";if(!/^\d{9,18}$/.test(no))return E.textContent="Account number must be 9 to 18 digits.";if(!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(ifc))return E.textContent="Enter a valid IFSC, like HDFC0001234.";a={type:"Bank",holder:h,no:no.slice(-4),ifsc:ifc}}
+a.def=!P.accts.length;P.accts.push(a);saveP();acct("pay");toast("Account added. Verification is simulated in the beta.")}});
+function prefill(){function f(i,v){var el=$(i);if(el&&!el.value&&v)el.value=v}var d=P.accts.filter(function(a){return a.def&&a.type==="UPI"})[0];
+f("sName",P.name);f("gName",P.name);f("sPan",P.pan);f("gPan",P.pan);f("sState",P.state);f("gState",P.state);if(d){f("sUpi",d.id);f("gUpi",d.id)}}
+$("sellTop").addEventListener("click",prefill);$("newGroup").addEventListener("click",prefill);
+loadP();
+load();chips();renderW();setTheme((function(){try{return localStorage.getItem("vouchly_theme")||"system"}catch(e){return"system"}})());drawer();
+$("grid").innerHTML='<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
+setTimeout(render,$("splash")?1800:650);
+})();
+</script>
+</body>
+</html>
